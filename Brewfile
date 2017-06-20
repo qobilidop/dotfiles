@@ -1,3 +1,4 @@
+tap "caskroom/cask"
 brew "mas"
 brew "node"
 cask "1password"
