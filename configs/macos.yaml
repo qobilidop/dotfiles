@@ -7,9 +7,9 @@
     file: brew/Brewfile
 
 - link:
-    ~/.bash-it:
-    ~/.bash_profile:
-    ~/.bashrc:
+    ~/.bash-it: bash/bash-it
+    ~/.bash_profile: bash/bash_profile
+    ~/.bashrc: bash/bashrc
     ~/.gitconfig:
     ~/.hyper.js:
     ~/Library/Application Support/Code/User/settings.json: vscode/settings.json
