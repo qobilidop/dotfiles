@@ -7,6 +7,9 @@
     file: Brewfile
 
 - link:
+    ~/.bash-it:
+    ~/.bash_profile:
+    ~/.bashrc:
     ~/.gitconfig:
     ~/.hyper.js:
     ~/Library/Application Support/Code/User/settings.json: vscode/settings.json
