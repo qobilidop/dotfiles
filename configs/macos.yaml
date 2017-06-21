@@ -4,7 +4,7 @@
       relink: true
 
 - brewfile:
-    file: Brewfile
+    file: brew/Brewfile
 
 - link:
     ~/.bash-it:

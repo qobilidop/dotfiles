@@ -7,4 +7,6 @@ cask "google-chrome"
 cask "hyper"
 cask "slack"
 cask "visual-studio-code"
+mas "Magnet", id: 441258766
 mas "WeChat", id: 836500024
+mas "The Unarchiver", id: 425424353
