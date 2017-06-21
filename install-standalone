@@ -14,7 +14,7 @@ DOTBOT_BIN="bin/dotbot"
 
 BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-PLUGIN="--plugin-dir dotbot-brewfile"
+PLUGIN="--plugin-dir meta/dotbot-brewfile"
 
 
 cd "${BASE_DIR}"
