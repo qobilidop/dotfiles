@@ -1,2 +1,3 @@
 - link:
+    ~/.bash-it/custom/git.bash: git/git.bash
     ~/.gitconfig: git/gitconfig
