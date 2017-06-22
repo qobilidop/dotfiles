@@ -3,8 +3,13 @@
 source install-common.sh
 
 
-"${BASE_DIR}/${META_DIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASE_DIR}" $PLUGIN -c "${META_DIR}/${BASE_CONFIG}${CONFIG_SUFFIX}"
+CONFIG_FILES="${META_DIR}/${BASE_CONFIG}${CONFIG_SUFFIX}"
 
 for config in ${@}; do
-    "${BASE_DIR}/${META_DIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASE_DIR}" $PLUGIN -c "${META_DIR}/${CONFIG_DIR}/${config}${CONFIG_SUFFIX}"
+    CONFIG_FILES+=" ${META_DIR}/${CONFIG_DIR}/${config}${CONFIG_SUFFIX}"
 done
+
+TEMP_CONFIG="${BASE_DIR}/install.conf.yaml"
+cat ${CONFIG_FILES} > ${TEMP_CONFIG}
+"${BASE_DIR}/${META_DIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASE_DIR}" $PLUGIN -c ${TEMP_CONFIG}
+rm ${TEMP_CONFIG}
