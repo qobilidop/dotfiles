@@ -1,11 +1,8 @@
 # dotfiles
 
-## About
-
-- Personal information is included. Do not use out of the box.
-- Install scripts are powered by [Dotbot](https://github.com/anishathalye/dotbot), with the [brewfile plugin](https://github.com/sobolevn/dotbot-brewfile).
-- Inspirations for repository strcuture are drawn from [vsund/dotfiles](https://github.com/vsund/dotfiles) and [vbrandl/dotfiles](https://github.com/vbrandl/dotfiles).
-- [Bash-it](https://github.com/Bash-it/bash-it) is used for bash configurations.
+- General structure inspired by [holman/dotfiles](https://github.com/holman/dotfiles).
+- Installation powered by [Dotbot](https://github.com/anishathalye/dotbot), with the [brewfile plugin](https://github.com/sobolevn/dotbot-brewfile). 
+- Idea of profiles borrowed from [vsund/dotfiles](https://github.com/vsund/dotfiles), and modified to my personal taste.
 
 ## Usage
 
