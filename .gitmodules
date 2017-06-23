@@ -1,8 +1,8 @@
 [submodule "dotbot"]
-	path = meta/dotbot
+	path = tools/dotbot
 	url = https://github.com/anishathalye/dotbot
 [submodule "dotbot-brewfile"]
-	path = meta/dotbot-brewfile
+	path = tools/dotbot-brewfile
 	url = https://github.com/sobolevn/dotbot-brewfile.git
 [submodule "bash-it"]
 	path = bash/bash-it
