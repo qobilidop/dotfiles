@@ -1,3 +1,2 @@
 - shell:
-  - brew/install.sh
   - conda/install_macos.sh
