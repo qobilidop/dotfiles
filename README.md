@@ -1,24 +1,71 @@
 # dotfiles
 
-- General structure inspired by [holman/dotfiles](https://github.com/holman/dotfiles).
-- Installation powered by [Dotbot](https://github.com/anishathalye/dotbot), with the [brewfile plugin](https://github.com/sobolevn/dotbot-brewfile). 
-- Idea of profiles borrowed from [vsund/dotfiles](https://github.com/vsund/dotfiles), and modified to my personal taste.
+## Features
+
+- [Installation](#installation-method) powered by [Dotbot]. 
+- [Flat topical structure](#flat-topical-structure) inspired by [holman/dotfiles].
+- [Hierarchical profile structure](#hierarchical-profile-structure)
+
+[Dotbot]: https://github.com/anishathalye/dotbot
+[holman/dotfiles]: https://github.com/holman/dotfiles
+
+### Installation method
+
+[Dotbot] is a tool that bootstraps your dotfiles. Basically it enables you to specify how to set up your dotfiles using YAML or JSON formatted configuration files. Read its documentation for details.
+
+In my dotfiles, the configuration files are distributed under each [topic directory](#flat-topical-structure). During installation, all the relevant configuration files of a [profile](#hierarchical-profile-structure) are combined into a single one and installed using [Dotbot].
+
+### Flat topical structure
+
+Like [holman/dotfiles](https://github.com/holman/dotfiles), each directory is a topic (except for some special ones). But instead of [specifying tasks according to special files](https://github.com/holman/dotfiles#components), YAML configuration files are used. Each topic could have several of those configuration files according to different [profiles](#hierarchical-profile-structure). This is a more flexible approach in the cost of having to write the configuration files explicitly. Special non-topic directories could be specified explicitly in the [install script](install.py). It would also be ignored automatically if there are not configuration files in it.
+
+### Hierarchical profile structure
+
+A profile is represented by a `.`-sperated multipart string. Let's use `h1.h2.h3` as an example:
+
+- Its parent profile is `h1.h2`.
+- Its configuration file is `h1.h2.h3.yaml`.
+- During installation, each topic directories' configuration files will be conbined into one first. In this case, `h1.yaml`, `h1.h2.yaml` and `h1.h2.h3.yaml` will be conbined in this order. Then, configurations of different topics are combined into the final configuration file, named `final.h1.h2.h3.yaml`.
 
 ## Usage
 
-### For a brand new Mac
+To install a profile
 
 ```
-./install-profile macos macos_init
+./install.py {profile_name}
 ```
 
-### Update on a Mac
+## My Settings
 
-```
-./install-profile macos
-```
 
-## Global Assumptions
+
+### Special directories
+
+- [`tools`](tools)
+
+### Global assumptions
 
 - `~/.bash-it/custom/` is for custom bash configurations.
 - `~/.gitignore/` is for individual global gitignore files.
+
+### Profiles
+
+- `init`: one-shot tasks, might take a while to run, like installing brew or conda
+- `init.macos`
+- `config`: day-to-day maintenance, should be quick to run, like linking dotfiles
+- `config.macos`
+
+### Examples
+
+For a vanilla Mac, I would do
+```
+git clone --recursive https://github.com/qobilidop/dotfiles ~/.dotfiles
+cd ~/.dotfiles
+./install.py init.macos
+./install.py config.macos
+```
+
+For daily maintenance, I would do
+```
+./~/.dotfiles/install.py config.macos
+```
