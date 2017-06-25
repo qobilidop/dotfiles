@@ -21,11 +21,11 @@ Like [holman/dotfiles](https://github.com/holman/dotfiles), each directory is a 
 
 ### Hierarchical profile structure
 
-A profile is represented by a `.`-sperated multipart string. Let's use `h1.h2.h3` as an example:
+A profile is represented by a `.`-separated multi-part string. Let's use `h1.h2.h3` as an example:
 
 - Its parent profile is `h1.h2`.
 - Its configuration file is `h1.h2.h3.yaml`.
-- During installation, each topic directories' configuration files will be conbined into one first. In this case, `h1.yaml`, `h1.h2.yaml` and `h1.h2.h3.yaml` will be conbined in this order. Then, configurations of different topics are combined into the final configuration file, named `final.h1.h2.h3.yaml`.
+- During installation, each topic directories' configuration files will be combined into a single one first. In this case, `h1.yaml`, `h1.h2.yaml` and `h1.h2.h3.yaml` will be combined in this order. Then, configurations of different topics are combined into the final configuration file, named `final.h1.h2.h3.yaml`.
 
 ## Usage
 
@@ -36,8 +36,6 @@ To install a profile
 ```
 
 ## My Settings
-
-
 
 ### Special directories
 
@@ -65,7 +63,7 @@ cd ~/.dotfiles
 ./install.py config.macos
 ```
 
-For daily maintenance, I would do
+For day-to-day maintenance, I would do
 ```
 ./~/.dotfiles/install.py config.macos
 ```
