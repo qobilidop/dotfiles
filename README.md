@@ -48,22 +48,15 @@ To install a profile
 
 ### Profiles
 
-- `init`: one-shot tasks, might take a while to run, like installing brew or conda
-- `init.macos`
-- `config`: day-to-day maintenance, should be quick to run, like linking dotfiles
+- `config`
 - `config.macos`
+- `config.tscc`
 
 ### Examples
 
-For a vanilla Mac, I would do
+To set up a vanilla Mac, I would do
 ```
 git clone --recursive https://github.com/qobilidop/dotfiles ~/.dotfiles
 cd ~/.dotfiles
-./install.py init.macos
 ./install.py config.macos
-```
-
-For day-to-day maintenance, I would do
-```
-./~/.dotfiles/install.py config.macos
 ```
