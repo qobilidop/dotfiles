@@ -1,5 +1,2 @@
-- shell:
-  - which brew || brew/install.sh
-
 - brewfile:
-    file: brew/Brewfile
+    file: brew/Brewfile-macOS
