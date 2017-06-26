@@ -1,2 +1,0 @@
-- shell:
-  - which conda || conda/install_macos.sh

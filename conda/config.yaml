@@ -1,2 +1,5 @@
+- shell:
+  - which conda || conda/install.sh
+
 - link:
     ~/.zsh_custom/conda.zsh: conda/conda.zsh
