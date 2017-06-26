@@ -1,0 +1,13 @@
+source ~/.antigen.zsh
+
+# Powerlevel9k theme
+POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
+antigen theme bhilburn/powerlevel9k powerlevel9k
+
+# Local customization
+antigen bundle $HOME/.zsh_custom
+
+antigen apply
+
+# Somehow antigen can not be found without soucing again
+source ~/.antigen.zsh

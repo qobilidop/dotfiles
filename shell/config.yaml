@@ -2,3 +2,9 @@
     ~/.profile: shell/profile
     ~/.bash_profile: shell/bash_profile
     ~/.bashrc: shell/bashrc
+
+- shell:
+  - "[ -f ~/.antigen.sh ] || curl -L git.io/antigen > ~/.antigen.zsh"
+
+- link:
+    ~/.zshrc: shell/zshrc

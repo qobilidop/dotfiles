@@ -1,2 +1,2 @@
 - link:
-    ~/.bash-it/custom/conda.bash: conda/conda.bash
+    ~/.zsh_custom/conda.zsh: conda/conda.zsh
