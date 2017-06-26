@@ -1,5 +1,6 @@
 // Place your settings in this file to overwrite default and user settings.
 {
+    "editor.fontFamily": "Hack, Menlo, Monaco, 'Courier New', monospace",
     "editor.rulers": [79],
     "workbench.colorTheme": "Solarized Light"
 }
