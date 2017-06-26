@@ -4,9 +4,6 @@
 [submodule "dotbot-brewfile"]
 	path = tools/dotbot-brewfile
 	url = https://github.com/sobolevn/dotbot-brewfile.git
-[submodule "bash-it"]
-	path = bash/bash-it
-	url = https://github.com/Bash-it/bash-it
 [submodule "git/gitignore"]
 	path = git/gitignore
 	url = https://github.com/github/gitignore
