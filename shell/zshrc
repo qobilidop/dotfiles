@@ -2,7 +2,7 @@ source ~/.antigen.zsh
 
 # Powerlevel9k theme configurations
 export DEFAULT_USER="$USER"
-POWERLEVEL9K_COLOR_SCHEME='light'
+POWERLEVEL9K_COLOR_SCHEME="light"
 POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
