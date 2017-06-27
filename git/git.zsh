@@ -1,3 +1,5 @@
 #!/usr/bin/env zsh
 
-cat ~/.gitignore/* > ~/.gitignore_global
+if [[ -d ~/.gitignore ]]; then
+    cat ~/.gitignore/* > ~/.gitignore_global
+fi
