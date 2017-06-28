@@ -60,3 +60,17 @@ git clone --recursive https://github.com/qobilidop/dotfiles ~/.dotfiles
 cd ~/.dotfiles
 ./install.py config.macos
 ```
+
+## References
+
+I have learned a lot from the following dotfiles when writing my own (in alphabetical order):
+
+- [anishathalye/dotfiles]
+- [holman/dotfiles]
+- [vsund/dotfiles]
+- [ooJerryLeeoo/dotfiles]
+
+[anishathalye/dotfiles]: https://github.com/anishathalye/dotfiles
+[holman/dotfiles]: https://github.com/holman/dotfiles
+[vsund/dotfiles]: https://github.com/vsund/dotfiles
+[ooJerryLeeoo/dotfiles]: https://github.com/ooJerryLeeoo/dotfiles
