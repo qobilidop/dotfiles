@@ -1,4 +1,6 @@
-IdentityFile ~/.ssh/id_rsa
+Host *
+    AddKeysToAgent yes
+    IdentityFile ~/.ssh/id_rsa
 
 Host ranch
     hostname ranch.tacc.utexas.edu
