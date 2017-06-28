@@ -1,14 +1,17 @@
-tap "caskroom/cask"
-tap "caskroom/fonts"
-brew "mas"
 brew "node"
+
+tap "caskroom/cask"
 cask "1password"
-cask "font-hack"
 cask "gitter"
 cask "google-chrome"
 cask "hyper"
 cask "slack"
 cask "visual-studio-code"
+
+tap "caskroom/fonts"
+cask "font-hack"
+
+brew "mas"
 mas "Magnet", id: 441258766
 mas "WeChat", id: 836500024
 mas "The Unarchiver", id: 425424353
