@@ -9,7 +9,7 @@ from os import path
 from subprocess import call
 
 # User Configurations
-NON_TOPICS = ['tool']
+NON_TOPICS = ['bin', 'tool']
 
 # Dotbot Configurations
 DOTBOT = 'tool/dotbot/bin/dotbot'
