@@ -5,4 +5,4 @@ which brew || PATH=~/.linuxbrew/bin:$PATH
 
 brew tap homebrew/bundle
 Brewfile=$1
-brew bundle --file $Brewfile
+brew bundle --file=$Brewfile

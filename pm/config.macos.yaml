@@ -1,2 +1,2 @@
-- brewfile:
-    file: pm/brew/Brewfile-macOS
+- shell:
+    - pm/brew/bundle.sh ~/.dotfiles/pm/brew/Brewfile

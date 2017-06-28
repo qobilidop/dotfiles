@@ -1,8 +1,6 @@
 - shell:
   - which brew || pm/brew/install.sh
-
-- brewfile:
-    file: pm/brew/Brewfile
+  - pm/brew/bundle.sh ~/.dotfiles/pm/brew/Brewfile
 
 - shell:
   - which conda || pm/conda/install.sh
