@@ -4,7 +4,7 @@
 
 ## Installation
 
-Installation is powered by [Dotbot], which is called in [install.py]()
+Installation is powered by [Dotbot], which is called in [install.py](install.py).
 
 ### Main procedure
 
@@ -39,12 +39,12 @@ git clone git@github.com:qobilidop/dotfiles-local.git local
 ### Topics
 
 Configurations are grouped into topics, including the following:
-- [editor]()
-- [os]()
-- [pm](): package manager
-- [shell]()
-- [terminal]()
-- [vcs](): version control system
+- [editor](editor)
+- [os](os)
+- [pm](pm): package manager
+- [shell](shell)
+- [terminal](terminal)
+- [vcs](vcs): version control system
 
 ### Profiles
 
@@ -60,8 +60,8 @@ If you want to understand the configuration files or define new ones, go read so
 
 ### Other directories
 
-- [bin]() will be added into `PATH`.
-- [tool]() contains [Dotbot]() as a submodule.
+- [bin](bin) will be added into `PATH`.
+- [tool](tool) contains [Dotbot] as a submodule.
 
 ## Acknowledgement
 
