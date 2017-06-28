@@ -3,25 +3,25 @@ Host *
     IdentityFile ~/.ssh/id_rsa
 
 Host ranch
-    hostname ranch.tacc.utexas.edu
-    user tg828592
+    HostName ranch.tacc.utexas.edu
+    User tg828592
 
 Host stampede
-    hostname stampede.tacc.utexas.edu
-    user tg828592
+    HostName stampede.tacc.utexas.edu
+    User tg828592
 
 Host tscc
-    hostname tscc.sdsc.edu
-    user b2dong
+    HostName tscc.sdsc.edu
+    User b2dong
 
 Host tscc1
-    hostname tscc-login1.sdsc.edu
-    user b2dong
+    HostName tscc-login1.sdsc.edu
+    User b2dong
 
 Host tscc2
-    hostname tscc-login2.sdsc.edu
-    user b2dong
+    HostName tscc-login2.sdsc.edu
+    User b2dong
 
 Host xsede
-    hostname login.xsede.org
-    user bdong
+    HostName login.xsede.org
+    User bdong
