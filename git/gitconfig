@@ -1,6 +1,5 @@
-[user]
-	name = qobilidop
-	email = qobilidop@gmail.com
-
 [core]
 	excludesfile = ~/.gitignore_global
+
+[include]
+	path = ~/.gitconfig_local
