@@ -1,0 +1,14 @@
+language: python
+
+python:
+  - "2.7"
+  - "3.6"
+
+os:
+  - linux
+  - osx
+
+script:
+  - ln -s $TRAVIS_BUILD_DIR ~/.dotfiles
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then ./install.py config.linux
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then ./install.py config.macos
