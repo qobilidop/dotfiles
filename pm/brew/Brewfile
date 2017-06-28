@@ -1,1 +1,5 @@
+tap "homebrew/core"
 brew "zsh"
+
+tap "homebrew/bundle"
+brew "bundle"
