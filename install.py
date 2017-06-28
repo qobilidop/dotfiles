@@ -9,12 +9,12 @@ from os import path
 from subprocess import call
 
 # User Configurations
-NON_TOPICS = ['tools']
+NON_TOPICS = ['tool']
 
 # Dotbot Configurations
-DOTBOT = 'tools/dotbot/bin/dotbot'
+DOTBOT = 'tool/dotbot/bin/dotbot'
 PLOGINS = [
-    '--plugin-dir', 'tools/dotbot-brewfile'
+    '--plugin-dir', 'tool/dotbot-brewfile'
 ]
 
 # Path Processing

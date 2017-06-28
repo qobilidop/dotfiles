@@ -1,6 +1,0 @@
-- shell:
-  - 
-    command: which brew || brew/install.sh
-
-- brewfile:
-    file: brew/Brewfile

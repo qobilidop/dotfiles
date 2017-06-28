@@ -1,0 +1,13 @@
+- shell:
+  - 
+    command: which brew || pm/brew/install.sh
+
+- brewfile:
+    file: pm/brew/Brewfile
+
+- shell:
+  - 
+    command: which conda || pm/conda/install.sh
+
+- link:
+    ~/.zsh_custom/conda.zsh: pm/conda/conda.zsh

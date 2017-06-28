@@ -1,10 +1,10 @@
 - link:
-    ~/.profile: shell/profile
-    ~/.bash_profile: shell/bash_profile
-    ~/.bashrc: shell/bashrc
+    ~/.profile: shell/sh/profile
+    ~/.bash_profile: shell/bash/bash_profile
+    ~/.bashrc: shell/bash/bashrc
 
 - shell:
   - "[ -f ~/.antigen.sh ] || curl -L git.io/antigen > ~/.antigen.zsh"
 
 - link:
-    ~/.zshrc: shell/zshrc
+    ~/.zshrc: shell/zsh/zshrc
