@@ -58,7 +58,7 @@ def get_configs(topic, profile):
         to_consider = path.join(BASE_DIR, topic, profile + '.yaml')
         if path.exists(to_consider):
             print('Add', path.basename(to_consider))
-            configs += [to_consider]
+            configs.insert(0, to_consider)
         profile = profile[:profile.rfind('.')]
     print()
     return configs
