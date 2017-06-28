@@ -1,2 +1,5 @@
+# Ignore local configurations
+/local/
+
 # Ignore generated final configuration file
 final.*.yaml
