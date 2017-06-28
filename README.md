@@ -2,77 +2,77 @@
 
 [![Build Status](https://travis-ci.org/qobilidop/dotfiles.svg?branch=master)](https://travis-ci.org/qobilidop/dotfiles)
 
-## Features
+## Installation
 
-- [Installation](#installation-method) powered by [Dotbot]. 
-- [Flat topical structure](#flat-topical-structure) inspired by [holman/dotfiles].
-- [Hierarchical profile structure](#hierarchical-profile-structure)
+Installation is powered by [Dotbot], which is called in [install.py]()
 
-[Dotbot]: https://github.com/anishathalye/dotbot
-[holman/dotfiles]: https://github.com/holman/dotfiles
-
-### Installation method
-
-[Dotbot] is a tool that bootstraps your dotfiles. Basically it enables you to specify how to set up your dotfiles using YAML or JSON formatted configuration files. Read its documentation for details.
-
-In my dotfiles, the configuration files are distributed under each [topic directory](#flat-topical-structure). During installation, all the relevant configuration files of a [profile](#hierarchical-profile-structure) are combined into a single one and installed using [Dotbot].
-
-### Flat topical structure
-
-Like [holman/dotfiles](https://github.com/holman/dotfiles), each directory is a topic (except for some special ones). But instead of [specifying tasks according to special files](https://github.com/holman/dotfiles#components), YAML configuration files are used. Each topic could have several of those configuration files according to different [profiles](#hierarchical-profile-structure). This is a more flexible approach in the cost of having to write the configuration files explicitly. Special non-topic directories could be specified explicitly in the [install script](install.py). It would also be ignored automatically if there are not configuration files in it.
-
-### Hierarchical profile structure
-
-A profile is represented by a `.`-separated multi-part string. Let's use `h1.h2.h3` as an example:
-
-- Its parent profile is `h1.h2`.
-- Its configuration file is `h1.h2.h3.yaml`.
-- During installation, each topic directories' configuration files will be combined into a single one first. In this case, `h1.yaml`, `h1.h2.yaml` and `h1.h2.h3.yaml` will be combined in this order. Then, configurations of different topics are combined into the final configuration file, named `final.h1.h2.h3.yaml`.
-
-## Usage
-
-To install a profile
+### Main procedure
 
 ```
-./install.py {profile_name}
+git clone --recursive git@github.com:qobilidop/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
+./install.py config.macos  # or other profile defined
 ```
 
-## My Settings
+#### Notes on linking failures
 
-### Special directories
+The install script tries to link dotfiles to the home directory. When there are already dotfiles in the home directory, the install script will say:
 
-- [`tools`](tools)
+```
+{some dotfile} already exists but is a regular file or directory
+```
 
-### Global assumptions
+In this case, it is up to you to backup or remove the previous dotfiles and run the install script again.
 
-- `~/.bash-it/custom/` is for custom bash configurations.
-- `~/.gitignore/` is for individual global gitignore files.
+### Local configurations
+
+I have separated out my local configurations such as my GitHub username and email into a [separate repository](https://github.com/qobilidop/dotfiles-local). Here I use it in an example. Remember to replace it by your own.
+
+```
+cd ~/.dotfiles
+git clone git@github.com:qobilidop/dotfiles-local.git local
+./install.py config.macos  # or other profile defined
+```
+
+## Organization
+
+### Topics
+
+Configurations are grouped into topics, including the following:
+- [editor]()
+- [os]()
+- [pm](): package manager
+- [shell]()
+- [terminal]()
+- [vcs](): version control system
 
 ### Profiles
 
+Within each topic directory, there are configuration files named `{profile_name}.yaml`. `profile_name` is hierarchical, such `config.macos`. For this profile, its parent profile is `config`. Configurations in the parent profiles go into the child profile automatically. And child profile overwrites parent profile.
+
+I have defined the following profiles:
 - `config`
+- `config.linux`
+- `config.linux.tscc`: for my account on [TSCC](http://www.sdsc.edu/support/user_guides/tscc.html)
 - `config.macos`
-- `config.tscc`
 
-### Examples
+If you want to understand the configuration files or define new ones, go read some [Dotbot] documentation.
 
-To set up a vanilla Mac, I would do
-```
-git clone --recursive https://github.com/qobilidop/dotfiles ~/.dotfiles
-cd ~/.dotfiles
-./install.py config.macos
-```
+### Other directories
 
-## References
+- [bin]() will be added into `PATH`.
+- [tool]() contains [Dotbot]() as a submodule.
 
-I have learned a lot from the following dotfiles when writing my own (in alphabetical order):
+## Acknowledgement
 
-- [anishathalye/dotfiles]
-- [holman/dotfiles]
-- [vsund/dotfiles]
-- [ooJerryLeeoo/dotfiles]
+I have drawn inspirations and learned from many people's dotfiles including (in alphabetical order):
 
-[anishathalye/dotfiles]: https://github.com/anishathalye/dotfiles
-[holman/dotfiles]: https://github.com/holman/dotfiles
-[vsund/dotfiles]: https://github.com/vsund/dotfiles
-[ooJerryLeeoo/dotfiles]: https://github.com/ooJerryLeeoo/dotfiles
+- [alrra/dotfiles](https://github.com/alrra/dotfiles)
+- [anishathalye/dotfiles](https://github.com/anishathalye/dotfiles)
+- [holman/dotfiles](https://github.com/holman/dotfiles)
+- [vsund/dotfiles](https://github.com/vsund/dotfiles)
+- [ooJerryLeeoo/dotfiles](https://github.com/ooJerryLeeoo/dotfiles)
+
+Most importantly, [Dotbot] makes it much easier to install and maintain dotfiles.
+
+[Dotbot]: https://github.com/anishathalye/dotbot
