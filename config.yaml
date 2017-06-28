@@ -1,0 +1,3 @@
+- link:
+    ~/.gitconfig_local: local/gitconfig
+    ~/.ssh/config: local/ssh/config
