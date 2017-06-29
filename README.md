@@ -49,12 +49,22 @@ to add my public ssh key.
 ### Topics
 
 Configurations are grouped into topics, including the following:
-- [install](install): installation configurations, must go first
+- [install](install): installation configurations, must be the first
+    - dotbot
 - [editor](editor)
-- [pm](pm): package manager
+    - vscode
+- [local](https://github.com/qobilidop/dotfiles-local): optional
+- [pm](pm)
+    - brew
+    - conda
 - [shell](shell)
+    - bash
+    - sh
+    - zsh
 - [terminal](terminal)
-- [vcs](vcs): version control system
+    - hyper
+- [vcs](vcs)
+    - git
 
 ### Profiles
 
