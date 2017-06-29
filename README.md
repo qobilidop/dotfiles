@@ -34,6 +34,16 @@ git clone git@github.com:qobilidop/dotfiles-local.git local
 ./install.py config.macos  # or other profile defined
 ```
 
+### Optional procedures
+
+For servers I have access to, I would do
+
+```sh
+authorize_github_key qobilidop
+```
+
+to add my public ssh key.
+
 ## Organization
 
 ### Topics
