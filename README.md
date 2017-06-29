@@ -41,7 +41,6 @@ git clone git@github.com:qobilidop/dotfiles-local.git local
 Configurations are grouped into topics, including the following:
 - [install](install): installation configurations, must go first
 - [editor](editor)
-- [os](os)
 - [pm](pm): package manager
 - [shell](shell)
 - [terminal](terminal)
