@@ -21,3 +21,6 @@ antigen apply
 
 # Somehow antigen can not be found without soucing again
 source ~/.antigen.zsh
+
+# The following line should be at the end
+eval "$(direnv hook zsh)"
