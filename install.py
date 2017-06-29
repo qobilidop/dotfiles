@@ -9,13 +9,12 @@ from os import path
 from subprocess import call
 
 # User Configurations
-NON_TOPICS = ['bin', 'tool']
+NON_TOPICS = ['bin']
+TOPIC_PRIORITY = ['install']
 
 # Dotbot Configurations
-DOTBOT = 'tool/dotbot/bin/dotbot'
-PLOGINS = [
-    '--plugin-dir', 'tool/dotbot-brewfile'
-]
+DOTBOT = 'install/dotbot/bin/dotbot'
+PLUGINS = []
 
 # Path Processing
 BASE_DIR = path.dirname(path.realpath(__file__))
@@ -44,10 +43,14 @@ def collect(profile):
 
 def get_topics():
     """Collect all topics."""
-    topics = ['.'] + [path.basename(p) for p in
-                      glob(path.join(BASE_DIR, '*')) if path.isdir(p)]
-    topics = [t for t in topics if t not in NON_TOPICS]
-    return sorted(topics)
+    # Start with all subdirectories
+    topics = [path.basename(p)
+              for p in glob(path.join(BASE_DIR, '*')) if path.isdir(p)]
+    # Remove non-topics and topic priority
+    topics = [t for t in topics if t not in (NON_TOPICS + TOPIC_PRIORITY)]
+    # Sort in order
+    topics = TOPIC_PRIORITY + sorted(topics)
+    return topics
 
 
 def get_configs(topic, profile):
@@ -80,7 +83,7 @@ def combine(configs, final_config):
 def install(config):
     """Use Dotbot to install according to configuration."""
     print('Install')
-    call([DOTBOT, '-d', BASE_DIR] + PLOGINS + ['-c', config])
+    call([DOTBOT, '-d', BASE_DIR] + PLUGINS + ['-c', config])
 
 
 if __name__ == '__main__':

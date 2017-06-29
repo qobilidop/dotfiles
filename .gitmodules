@@ -1,5 +1,5 @@
 [submodule "dotbot"]
-	path = tool/dotbot
+	path = install/dotbot
 	url = https://github.com/anishathalye/dotbot
 [submodule "git/gitignore"]
 	path = vcs/git/gitignore
