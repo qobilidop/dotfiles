@@ -25,3 +25,7 @@ Host tscc2
 Host xsede
     HostName login.xsede.org
     User bdong
+
+Host yt-data
+    HostName dickenson.dreamhost.com
+    User yt_analysis
