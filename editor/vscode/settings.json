@@ -2,5 +2,6 @@
 {
     "editor.fontFamily": "Hack, Menlo, Monaco, 'Courier New', monospace",
     "editor.rulers": [79],
+    "editor.wordWrap": "on",
     "workbench.colorTheme": "Solarized Light"
 }
