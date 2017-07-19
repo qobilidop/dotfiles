@@ -2,6 +2,8 @@ brew "node"
 
 tap "caskroom/cask"
 cask "1password"
+cask "baidunetdisk"
+cask "docker"
 cask "gitter"
 cask "google-chrome"
 cask "hyper"
