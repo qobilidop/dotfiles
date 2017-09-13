@@ -3,31 +3,6 @@ Host *
     IdentityFile ~/.ssh/id_rsa
 
 Include config.d/nersc
-
-Host ranch
-    HostName ranch.tacc.utexas.edu
-    User tg828592
-
-Host stampede
-    HostName stampede.tacc.utexas.edu
-    User tg828592
-
-Host tscc
-    HostName tscc.sdsc.edu
-    User b2dong
-
-Host tscc1
-    HostName tscc-login1.sdsc.edu
-    User b2dong
-
-Host tscc2
-    HostName tscc-login2.sdsc.edu
-    User b2dong
-
-Host xsede
-    HostName login.xsede.org
-    User bdong
-
-Host yt-data
-    HostName dickenson.dreamhost.com
-    User yt_analysis
+Include config.d/sdsc
+Include config.d/xsede
+Include config.d/yt

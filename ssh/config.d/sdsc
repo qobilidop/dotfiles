@@ -1,0 +1,11 @@
+Host tscc
+    HostName tscc.sdsc.edu
+    User b2dong
+
+Host tscc1
+    HostName tscc-login1.sdsc.edu
+    User b2dong
+
+Host tscc2
+    HostName tscc-login2.sdsc.edu
+    User b2dong
