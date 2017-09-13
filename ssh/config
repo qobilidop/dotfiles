@@ -2,6 +2,8 @@ Host *
     AddKeysToAgent yes
     IdentityFile ~/.ssh/id_rsa
 
+Include config.d/nersc
+
 Host ranch
     HostName ranch.tacc.utexas.edu
     User tg828592

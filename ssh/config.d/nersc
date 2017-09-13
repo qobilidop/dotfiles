@@ -1,0 +1,7 @@
+Host cori
+    HostName cori.nersc.gov
+    User cori
+
+Host edison
+    HostName edison.nersc.gov
+    User bdong
