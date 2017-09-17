@@ -1,5 +1,5 @@
 - link:
-    ~/.gitignore/VisualStudioCode.gitignore: vcs/git/gitignore/Global/VisualStudioCode.gitignore
+    ~/.gitignore/VisualStudioCode.gitignore: config/git/gitignore/Global/VisualStudioCode.gitignore
     ~/Library/Application Support/Code/User/settings.json: config/vscode/settings.json
 
 - link:
