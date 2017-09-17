@@ -3,4 +3,4 @@
     ~/Library/Application Support/Code/User/settings.json: config/vscode/settings.json
 
 - link:
-    ~/.hyper.js: terminal/hyper/hyper.js
+    ~/.hyper.js: config/hyper/hyper.js
