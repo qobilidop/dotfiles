@@ -2,6 +2,14 @@
 
 [![Build Status](https://travis-ci.org/qobilidop/dotfiles.svg?branch=master)](https://travis-ci.org/qobilidop/dotfiles)
 
+## Requirements
+
+Below are my requirements for dotfiles:
+- Include both configuration files and installation scripts of common softwares.
+- A single idempotent script to bootstrap a brand new machine (with Linux/Mac OS).
+- Support for multiple configuration profiles.
+- Convenient modification process.
+
 ## Installation
 
 Installation is powered by [Dotbot], which is called in [install.py](install.py).
