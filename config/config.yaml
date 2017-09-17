@@ -11,3 +11,7 @@
 
 - link:
     ~/.zshrc: config/zsh/zshrc
+
+- link:
+    ~/.gitconfig: config/git/gitconfig
+    ~/.zsh_custom/git.zsh: config/git/git.zsh

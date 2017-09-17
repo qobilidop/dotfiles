@@ -1,2 +1,5 @@
 - link:
     ~/.zshenv: config/zsh/zshenv_tscc
+
+- link:
+    ~/.gitignore/Linux.gitignore: config/git/gitignore/Global/Linux.gitignore

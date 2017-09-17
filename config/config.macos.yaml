@@ -4,3 +4,6 @@
 
 - link:
     ~/.hyper.js: config/hyper/hyper.js
+
+- link:
+    ~/.gitignore/macOS.gitignore: config/git/gitignore/Global/macOS.gitignore
