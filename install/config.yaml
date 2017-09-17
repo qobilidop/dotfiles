@@ -4,3 +4,12 @@
       relink: true
     shell:
       stdout: true
+
+# Install brew
+- shell:
+  - which brew || install/install_brew.sh
+  - install/install_brew_bundle.sh install/Brewfile
+
+# Install conda
+- shell:
+  - which conda || install/install_conda.sh

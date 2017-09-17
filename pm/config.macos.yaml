@@ -1,2 +1,0 @@
-- shell:
-    - pm/brew/bundle.sh ~/.dotfiles/pm/brew/Brewfile

@@ -1,9 +1,0 @@
-- shell:
-  - which brew || pm/brew/install.sh
-  - pm/brew/bundle.sh ~/.dotfiles/pm/brew/Brewfile
-
-- shell:
-  - which conda || pm/conda/install.sh
-
-- link:
-    ~/.zsh_custom/conda.zsh: pm/conda/conda.zsh
