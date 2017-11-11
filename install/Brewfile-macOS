@@ -9,6 +9,7 @@ cask "google-backup-and-sync"
 cask "google-chrome"
 cask "hyper"
 cask "slack"
+cask "vagrant"
 cask "visual-studio-code"
 
 tap "caskroom/fonts"
