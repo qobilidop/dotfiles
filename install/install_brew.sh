@@ -10,7 +10,7 @@ function install_ruby()
     ./configure --prefix=$HOME/.local
     make
     make install
-    cd ~ && rm -rf ruby-2.4.1 $$ rm ruby.tar.gz
+    cd ~ && rm -rf ruby-2.4.1 && rm ruby.tar.gz
     export PATH=$HOME/.local/bin:$PATH
 }
 
