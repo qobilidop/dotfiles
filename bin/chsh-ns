@@ -7,10 +7,12 @@
 #     chsh-ns $(which zsh)
 #
 
-my_shell="$1"
-# Check if my_shell is not in /ets/shells.
-if ! grep -q "^$my_shell$" /etc/shells; then
-    echo "Appending $my_shell to /ets/shells"
-    echo "$my_shell" | sudo tee -a /etc/shells
+new_shell="$1"
+# Check if new_shell is already in /ets/shells.
+if grep -q "^$new_shell$" /etc/shells; then
+    echo "$new_shell is already in /ets/shells"
+else
+    echo "Appending $new_shell to /ets/shells"
+    echo "$new_shell" | sudo tee -a /etc/shells
 fi
-chsh -s "$my_shell"
+chsh -s "$new_shell"
