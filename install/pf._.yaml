@@ -1,14 +1,22 @@
+# General config
+- defaults:
+    link:
+      create: true
+      relink: true
+    shell:
+      stdout: true
+
 # Install rvm
 - shell:
   - which rvm || install/install-rvm.sh
 - env:
-    PATH: {HOME}/.rvm/rubies/default/bin:{PATH}
+    PATH: "{HOME}/.rvm/rubies/default/bin:{PATH}"
 
 # Install brew
 - shell:
   - which brew || install/install-brew.sh
 - env:
-    PATH: {HOME}/.linuxbrew/bin:{PATH}
+    PATH: "{HOME}/.linuxbrew/bin:{PATH}"
 
 # Brew bundle
 - shell:

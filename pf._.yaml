@@ -1,6 +1,0 @@
-- defaults:
-    link:
-      create: true
-      relink: true
-    shell:
-      stdout: true

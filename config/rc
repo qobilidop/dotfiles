@@ -1,3 +1,4 @@
 for rc in ~/.rc.d/*; do
     echo "Source $rc"
     source $rc
+done
