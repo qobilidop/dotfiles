@@ -1,9 +1,9 @@
 [submodule "dotbot"]
 	path = install/dotbot
 	url = https://github.com/anishathalye/dotbot
-[submodule "git/gitignore"]
-	path = config/git/gitignore
-	url = https://github.com/github/gitignore
-[submodule "install/dotbot-env"]
+[submodule "dotbot-env"]
 	path = install/dotbot-env
 	url = https://github.com/qobilidop/dotbot-env
+[submodule "gitignore"]
+	path = config/git/gitignore
+	url = https://github.com/github/gitignore
