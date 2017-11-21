@@ -1,8 +1,22 @@
 #!/usr/bin/env bash
 #
-# Download the public ssh key of a GitHub user and append it to ~/.ssh/authorized_keys.
+# Download the public ssh key of a GitHub user and append it to
+# ~/.ssh/authorized_keys if it's not already there.
 # Example:
 #     authorize-github-key qobilidop
 #
 
-curl https://github.com/$1.keys >> ~/.ssh/authorized_keys
+user=$1
+echo "Downloading key"
+key=$(curl https://github.com/$user.keys)
+authorized_keys=~/.ssh/authorized_keys
+# Check if the key is invalid.
+if [ -z "$key" ] || [ "$key" = "Not Found" ]; then
+    echo "Key is not found for user $user"
+# Check if the key is already in authorized_keys.
+elif grep -q "^$key$" "$authorized_keys"; then
+    echo "Key is already in $authorized_keys"
+else
+    echo "Adding key to $authorized_keys"
+    echo "$key" >> "$authorized_keys"
+fi
