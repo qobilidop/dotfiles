@@ -1,5 +1,5 @@
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='emacs'
 else
-  export EDITOR='vscode'
+  export EDITOR='code'
 fi
