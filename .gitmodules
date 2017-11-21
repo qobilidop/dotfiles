@@ -4,3 +4,6 @@
 [submodule "git/gitignore"]
 	path = config/git/gitignore
 	url = https://github.com/github/gitignore
+[submodule "install/dotbot-env"]
+	path = install/dotbot-env
+	url = https://github.com/qobilidop/dotbot-env
