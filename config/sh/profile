@@ -1,7 +1,0 @@
-if [ -f /etc/profile ]; then
-  . /etc/profile
-fi
-
-PATH=~/.dotfiles/bin:$PATH
-PATH=~/.local/bin:$PATH
-PATH=~/.linuxbrew/bin:$PATH

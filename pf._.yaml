@@ -4,3 +4,6 @@
       relink: true
     shell:
       stdout: true
+
+- env:
+    PATH: {PWD}/bin:{PATH}

@@ -1,9 +1,15 @@
-# Fix fpath
-fpath=($default_fpath $fpath)
+# oh-my-zsh
+# https://github.com/robbyrussell/oh-my-zsh/blob/master/templates/zshrc.zsh-template
+export ZSH=$HOME/.oh-my-zsh
+ZSH_THEME="powerlevel9k/powerlevel9k"
+plugins=(
+  git
+)
+source $ZSH/oh-my-zsh.sh
 
-source ~/.antigen.zsh
 
-# Powerlevel9k theme configurations
+# powerlevel9k
+# https://github.com/bhilburn/powerlevel9k
 export DEFAULT_USER="$USER"
 POWERLEVEL9K_COLOR_SCHEME="light"
 POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
@@ -12,15 +18,13 @@ POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status ssh anaconda)
 POWERLEVEL9K_ANACONDA_BACKGROUND="green"
-antigen theme bhilburn/powerlevel9k powerlevel9k
 
-# Local customization
-antigen bundle $HOME/.zsh_custom
 
-antigen apply
+# local customization
+source ~/.rc
 
-# Somehow antigen can not be found without soucing again
-source ~/.antigen.zsh
 
-# The following line should be at the end
+# direnv
+# https://direnv.net/
+# Should be at the end.
 eval "$(direnv hook zsh)"

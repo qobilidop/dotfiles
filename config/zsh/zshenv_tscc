@@ -1,2 +1,0 @@
-default_fpath=(~/.linuxbrew/share/zsh/site-functions)
-default_fpath+=($(echo ~/.linuxbrew/Cellar/zsh/*/share/zsh/functions))

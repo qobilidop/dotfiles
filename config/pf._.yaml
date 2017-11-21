@@ -1,17 +1,4 @@
 - link:
-    ~/.zsh_custom/conda.zsh: config/conda.zsh
-
-- link:
-    ~/.profile: config/sh/profile
-    ~/.bash_profile: config/bash/bash_profile
-    ~/.bashrc: config/bash/bashrc
-
-- shell:
-  - "[ -f ~/.antigen.sh ] || curl -L git.io/antigen > ~/.antigen.zsh"
-
-- link:
-    ~/.zshrc: config/zsh/zshrc
-
-- link:
-    ~/.gitconfig: config/git/gitconfig
-    ~/.zsh_custom/git.zsh: config/git/git.zsh
+    ~/.gitconfig: config/gitconfig
+    ~/.rc.d: config/rc.d
+    ~/.rc: config/rc
