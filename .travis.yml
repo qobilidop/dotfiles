@@ -6,5 +6,6 @@ os:
 
 script:
   - ln -s "$TRAVIS_BUILD_DIR" ~/.dotfiles
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then ./install.py config.linux; fi
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then ./install.py config.macos; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then ./install.py pf.local; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then ./install.py pf.remote; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then ./install.py pf.local.macos; fi
