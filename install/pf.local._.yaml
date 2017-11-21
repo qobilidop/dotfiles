@@ -1,5 +1,5 @@
 - shell:
   - brew bundle -v --file=install/Brewfile.local
-  - bin/chsh-zsh
+  - sudo chsh -s "$(which zsh)" "$USER"
   - install/install-oh-my-zsh.sh
   - install/install-powerlevel9k.sh
