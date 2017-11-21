@@ -1,7 +1,5 @@
 # dotfiles
 
-[![Build Status](https://travis-ci.org/qobilidop/dotfiles.svg?branch=master)](https://travis-ci.org/qobilidop/dotfiles)
-
 ## Constraints
 
 Below are the constraints for my dotfiles:
