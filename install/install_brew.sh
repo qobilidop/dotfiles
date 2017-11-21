@@ -1,40 +1,20 @@
 #!/usr/bin/env bash
-# Install brew on macOS (Homebrew) or Linux (Linuxbrew).
 
-function install_ruby()
+function install_rvm()
 {
-    # Download and install ruby in ~/.local
-    curl -o ~/ruby.tar.gz https://cache.ruby-lang.org/pub/ruby/2.4/ruby-2.4.1.tar.gz
-    cd ~ && tar -zxvf ruby.tar.gz
-    cd ruby-2.4.1
-    ./configure --prefix=$HOME/.local
-    make
-    make install
-    cd ~ && rm -rf ruby-2.4.1 && rm ruby.tar.gz
-    export PATH=$HOME/.local/bin:$PATH
+    # See https://rvm.io/rvm/install
+    # Always prefer rvm ruby to system ruby.
+    gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+    \curl -sSL https://get.rvm.io | bash -s stable --ruby --ignore-dotfiles
+    source ~/.rvm/scripts/rvm
 }
 
-function install_homebrew()
+function install_brew()
 {
-    # See https://brew.sh/
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-}
-
-function install_linuxbrew()
-{
-    # See http://linuxbrew.sh/
+    # See https://github.com/Linuxbrew/install/blob/master/install
+    # This script automatically determines platform and installs Homebrew or Linuxbrew accordingly.
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"
 }
 
-which ruby || install_ruby
-case $(uname) in
-    "Darwin")
-        install_homebrew
-        ;;
-    "Linux")
-        install_linuxbrew
-        ;;
-    *)
-        echo "Unknown OS"
-        ;;
-esac
+which rvm || install_rvm
+which brew || install_brew
