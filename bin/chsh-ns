@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+#
+# Automate the process to use chsh for non-standard shells, by appending the
+# shell to /etc/shells when necessary.
+#
+# Example:
+#     chsh-ns $(which zsh)
+#
+
+my_shell="$1"
+# Check if my_shell is not in /ets/shells.
+if ! grep -q "^$my_shell$" /etc/shells; then
+    echo "Appending $my_shell to /ets/shells"
+    echo "$my_shell" | sudo tee -a /etc/shells
+fi
+chsh -s "$my_shell"
