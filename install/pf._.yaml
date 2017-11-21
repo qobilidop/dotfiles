@@ -1,12 +1,12 @@
 # Install rvm
 - shell:
-  - which rvm || install-rvm
+  - which rvm || install/install-rvm.sh
 - env:
     PATH: {HOME}/.rvm/rubies/default/bin:{PATH}
 
 # Install brew
 - shell:
-  - which brew || install-brew
+  - which brew || install/install-brew.sh
 - env:
     PATH: {HOME}/.linuxbrew/bin:{PATH}
 
@@ -17,4 +17,4 @@
 
 # Install conda
 - shell:
-  - which conda || install-conda
+  - which conda || install/install-conda.sh

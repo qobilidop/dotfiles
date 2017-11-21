@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# This script detects if $(which zsh) is in /etc/shells. Append to it if not.
+# And chsh to $(which zsh) eventually.
+
+my_zsh=$(which zsh)
+standard=false
+while read shell; do
+    if [ "$shell" = "$my_zsh" ]; then
+        standard=true
+    fi
+done < /etc/shells
+
+if [ "$standard" = false ]; then
+    echo "$my_zsh" | sudo tee -a /etc/shells
+fi
+chsh -s "$my_zsh"
