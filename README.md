@@ -2,19 +2,22 @@
 
 [![Build Status](https://travis-ci.org/qobilidop/dotfiles.svg?branch=master)](https://travis-ci.org/qobilidop/dotfiles)
 
-## Requirements
+## Constraints
 
-Below are my requirements for dotfiles:
-- Include both configuration files and installation scripts of common softwares.
-- A single idempotent script to bootstrap a brand new machine (with Linux/Mac OS).
-- Support for multiple configuration profiles.
-- Convenient modification process.
+Below are the constraints for my dotfiles:
+- There are two tasks: initial installation of core packages and day-to-day configuration tweaking.
+- To set up a brand new machine (Linux or maxOS) for work should be just one command.
+- Natually I would need a profile system to specify different configuration for different host.
 
-## Installation
+## Solution
 
-Installation is powered by [Dotbot], which is called in [install.py](install.py).
+[Dotbot] comes to the rescue. It's versatile enough to tackle both the installation and the configuration. It's neat enough to run as a single command. I have tweaked the install script to support a profile system. And all the constaints are satisfied!
 
-### Main procedure
+## Disclaimer
+
+This repository is meant to work out-of-the-box only for myself. It's recommended that you draw inspirations from this repo rather than using it directly.
+
+## Usage
 
 ```sh
 git clone --recursive git@github.com:qobilidop/dotfiles.git ~/.dotfiles
@@ -22,7 +25,9 @@ cd ~/.dotfiles
 ./install.py config.macos  # or other profile defined
 ```
 
-#### Notes on linking failures
+## Notes
+
+### Linking failures
 
 The install script tries to link dotfiles to the home directory. When there are already dotfiles in the home directory, the install script will say:
 
@@ -51,53 +56,5 @@ authorize_github_key qobilidop
 ```
 
 to add my public ssh key.
-
-## Organization
-
-### Topics
-
-Configurations are grouped into topics, including the following:
-- [install](install): installation configurations, must be the first
-    - dotbot
-- [editor](editor)
-    - vscode
-- [local](https://github.com/qobilidop/dotfiles-local): optional
-- [pm](pm)
-    - brew
-    - conda
-- [shell](shell)
-    - bash
-    - sh
-    - zsh
-- [terminal](terminal)
-    - hyper
-- [vcs](vcs)
-    - git
-
-### Profiles
-
-Within each topic directory, you would find configuration files named `{profile_name}.yaml`. `profile_name` is a hierarchical string, such `config.macos`. For this particular profile, its parent profile is `config`. Configurations in parent profiles always go into the child profile automatically. And child profile overwrites parent profile.
-
-I have defined the following profiles:
-- `config`
-- `config.linux`
-- `config.linux.tscc`: for my account on [TSCC](http://www.sdsc.edu/support/user_guides/tscc.html)
-- `config.macos`
-
-If you want to understand the configuration files or define new ones, please read the [Dotbot] documentation.
-
-### Other directories
-
-- [bin](bin): contains useful scripts, will be added to `PATH`.
-
-## Acknowledgement
-
-[Dotbot] makes it much easier to install and maintain dotfiles. Also, I have drawn inspirations and learned from many people's dotfiles including (in alphabetical order):
-
-- [alrra/dotfiles](https://github.com/alrra/dotfiles)
-- [anishathalye/dotfiles](https://github.com/anishathalye/dotfiles)
-- [holman/dotfiles](https://github.com/holman/dotfiles)
-- [vsund/dotfiles](https://github.com/vsund/dotfiles)
-- [ooJerryLeeoo/dotfiles](https://github.com/ooJerryLeeoo/dotfiles)
 
 [Dotbot]: https://github.com/anishathalye/dotbot
