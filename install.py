@@ -14,7 +14,7 @@ TOPIC_PRIORITY = ['install']
 
 # Dotbot Configurations
 DOTBOT = 'install/dotbot/bin/dotbot'
-PLUGINS = []
+PLUGINS = ['-p', 'intall/dotbot-env/env.py']
 
 # Path Processing
 BASE_DIR = path.dirname(path.realpath(__file__))
