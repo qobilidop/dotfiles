@@ -24,7 +24,7 @@ DOTBOT = path.join(BASE_DIR, DOTBOT)
 def main():
     """Main logic."""
     parser = ArgumentParser()
-    parser.add_argument('profile', type=str, default='config.macos')
+    parser.add_argument('profile', type=str, default='local.macos')
     args = parser.parse_args()
 
     configs = collect(args.profile)
@@ -58,7 +58,7 @@ def get_configs(topic, profile):
     print('Process', topic)
     configs = []
     while profile:
-        to_consider = path.join(BASE_DIR, topic, profile + '.yaml')
+        to_consider = path.join(BASE_DIR, topic, 'pf.' + profile + '._.yaml')
         if path.exists(to_consider):
             print('Add', path.basename(to_consider))
             configs.insert(0, to_consider)
