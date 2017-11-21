@@ -1,6 +1,3 @@
-brew "node"
-brew "zsh"
-
 tap "caskroom/cask"
 cask "1password"
 cask "baidunetdisk"

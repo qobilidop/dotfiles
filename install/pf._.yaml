@@ -1,15 +1,20 @@
-- defaults:
-    link:
-      create: true
-      relink: true
-    shell:
-      stdout: true
+# Install rvm
+- shell:
+  - which rvm || install-rvm
+- env:
+    PATH: {HOME}/.rvm/rubies/default/bin:{PATH}
 
 # Install brew
 - shell:
-  - which brew || install/install_brew.sh
-  - install/install_brew_bundle.sh install/Brewfile
+  - which brew || install-brew
+- env:
+    PATH: {HOME}/.linuxbrew/bin:{PATH}
+
+# Brew bundle
+- shell:
+  - brew tap homebrew/bundle 
+  - brew bundle -v --file=install/Brewfile
 
 # Install conda
 - shell:
-  - which conda || install/install_conda.sh
+  - which conda || install-conda

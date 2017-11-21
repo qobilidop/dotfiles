@@ -1,2 +1,2 @@
 - shell:
-    - install/install_brew_bundle.sh install/Brewfile-macOS
+  - brew bundle -v --file=install/Brewfile.local.macos
