@@ -2,6 +2,7 @@
 #
 # Download the public ssh key of a GitHub user and append it to
 # ~/.ssh/authorized_keys if it's not already there.
+#
 # Example:
 #     authorize-github-key qobilidop
 #
