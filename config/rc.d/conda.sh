@@ -1,2 +1,3 @@
 unset PYTHONPATH
-source ~/.miniconda/bin/activate
+export PATH=~/.miniconda/bin:$PATH
+source activate
