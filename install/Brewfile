@@ -1,5 +1,7 @@
 tap "homebrew/core"
 brew "cloc"
 brew "direnv"
+brew "node"
 brew "thefuck"
 brew "tldr"
+brew "zsh"

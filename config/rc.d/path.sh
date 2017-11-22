@@ -1,2 +1,1 @@
-PATH=~/.dotfiles/bin:$PATH
-PATH=~/.linuxbrew/bin:$PATH
+export PATH=~/.dotfiles/bin:$PATH

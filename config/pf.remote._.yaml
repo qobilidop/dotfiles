@@ -1,11 +1,3 @@
-# bash
-- link:
-    ~/.bashrc_local: config/bashrc
-
 # system
 - link:
     ~/.gitignore/Linux.gitignore: config/gitignore/Global/Linux.gitignore
-
-# zsh
-- link:
-    ~/.zshrc_local: config/zshrc

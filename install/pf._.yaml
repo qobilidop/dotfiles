@@ -6,23 +6,6 @@
     shell:
       stdout: true
 
-# Install rvm
-- shell:
-  - which rvm || install/install-rvm.sh
-- env:
-    PATH: "{HOME}/.rvm/rubies/default/bin:{PATH}"
-
-# Install brew
-- shell:
-  - which brew || install/install-brew.sh
-- env:
-    PATH: "{HOME}/.linuxbrew/bin:{PATH}"
-
-# Brew bundle
-- shell:
-  - brew tap homebrew/bundle 
-  - brew bundle -v --file=install/Brewfile
-
 # Install conda
 - shell:
   - which conda || install/install-conda.sh
