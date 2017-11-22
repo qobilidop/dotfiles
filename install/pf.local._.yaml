@@ -1,9 +1,3 @@
-# Install rvm
-- shell:
-  - which rvm || install/install-rvm.sh
-- env:
-    PATH: "{HOME}/.rvm/rubies/default/bin:{PATH}"
-
 # Install brew
 - shell:
   - which brew || install/install-brew.sh
