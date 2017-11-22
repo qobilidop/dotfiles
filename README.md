@@ -17,10 +17,10 @@ This repository is meant to work out-of-the-box only for myself. It's recommende
 
 ## Usage
 
-```sh
-git clone --recursive git@github.com:qobilidop/dotfiles.git ~/.dotfiles
+```bash
+git clone --recursive https://github.com/qobilidop/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
-./install.py config.macos  # or other profile defined
+./install.py pf.local.macos  # or other profile defined
 ```
 
 ## Notes
@@ -39,10 +39,10 @@ In this case, it is up to you to backup or remove the previous dotfiles and run 
 
 I have separated out my local configurations such as my GitHub username and email into a [separate repository](https://github.com/qobilidop/dotfiles-local). Here I use it in an example. Remember to replace it by your own.
 
-```sh
+```bash
 cd ~/.dotfiles
-git clone git@github.com:qobilidop/dotfiles-local.git local
-./install.py config.macos  # or other profile defined
+git clone https://github.com/qobilidop/dotfiles-local.git local
+./install.py pf.local.macos  # or other profile defined
 ```
 
 ### Optional procedures
