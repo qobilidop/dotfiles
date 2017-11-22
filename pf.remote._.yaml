@@ -1,2 +1,2 @@
 - link:
-    ~/.ssh/config: local/ssh/config_basic
+    ~/.ssh/config: local/ssh/config_remote

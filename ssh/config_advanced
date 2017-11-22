@@ -1,4 +1,0 @@
-Host *
-    AddKeysToAgent yes
-
-Include config_basic

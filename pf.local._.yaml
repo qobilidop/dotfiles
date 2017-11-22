@@ -1,3 +1,3 @@
 - link:
-    ~/.ssh/config: local/ssh/config_advanced
-    ~/.ssh/config_basic: local/ssh/config_basic
+    ~/.ssh/config: local/ssh/config_local
+    ~/.ssh/config_remote: local/ssh/config_remote
