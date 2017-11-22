@@ -2,7 +2,7 @@
 
 ## Philosophy
 
-I agree with @[anishathalye] that ["Dotfiles Are Not Meant to Be Forked"](http://www.anishathalye.com/2014/08/03/managing-your-dotfiles/). Most likely my personal preferences may not suit you. And even if it does, it's recommended to draw inspirations from my dotfiles rather than forking directly.
+I agree with @[anishathalye] that ["Dotfiles Are Not Meant to Be Forked"](http://www.anishathalye.com/2014/08/03/managing-your-dotfiles/). I would be very happy if my dotfiles happen to be your inspiration.
 
 ## Constraints
 
@@ -37,6 +37,10 @@ git clone https://github.com/qobilidop/dotfiles-local.git local
 ```
 
 ## Notes
+
+### Current status
+
+The brew installation part does not work properly. I ended up installing Homebrew manually. But I don't feel like spending more time on this at the moment. Probably the current issue would go away automatically in the future. Anyway, that's it for now.
 
 ### Linking failures
 
