@@ -1,0 +1,3 @@
+- link:
+    ~/.ssh/config: local/ssh/config_advanced
+    ~/.ssh/config_basic: local/ssh/config_basic

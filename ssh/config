@@ -1,8 +1,0 @@
-Host *
-    AddKeysToAgent yes
-    IdentityFile ~/.ssh/id_rsa
-
-Include config.d/nersc
-Include config.d/sdsc
-Include config.d/xsede
-Include config.d/yt

@@ -1,4 +1,2 @@
 - link:
     ~/.gitconfig_local: local/gitconfig
-    ~/.ssh/config: local/ssh/config
-    ~/.ssh/config.d: local/ssh/config.d
