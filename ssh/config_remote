@@ -1,3 +1,7 @@
+Host bridges
+    HostName bridges.psc.edu
+    User bdong
+
 Host edison
     HostName edison.nersc.gov
     User bdong
