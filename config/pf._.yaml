@@ -1,4 +1,5 @@
 - link:
+    ~/.condarc: config/condarc
     ~/.gitconfig: config/gitconfig
     ~/.rc.d: config/rc.d
     ~/.rc: config/rc

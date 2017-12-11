@@ -1,3 +1,3 @@
 unset PYTHONPATH
-export PATH=~/.miniconda/bin:$PATH
-source activate
+. ~/.miniconda/etc/profile.d/conda.sh
+conda activate base

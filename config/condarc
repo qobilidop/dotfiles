@@ -1,0 +1,6 @@
+channels:
+  - conda-canary
+  - defaults
+
+pinned_packages:
+  - conda-canary::conda
