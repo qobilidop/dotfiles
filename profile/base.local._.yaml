@@ -5,4 +5,4 @@
   - script/install-oh-my-zsh.sh
   - script/install-powerlevel9k.sh
 - link:
-  - ~/.zshrc: config/zshrc
+    ~/.zshrc: config/zshrc

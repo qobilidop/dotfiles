@@ -11,7 +11,7 @@ cask "virtualbox"
 cask "visual-studio-code"
 
 tap "caskroom/fonts"
-cask "font-hack"
+cask "font-hack-nerd-font"
 
 brew "mas"
 mas "Magnet", id: 441258766

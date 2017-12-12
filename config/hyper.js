@@ -1,15 +1,16 @@
 // See https://hyper.is
 
 module.exports = {
+  updateChannel: 'canary',
 
   // See https://hyper.is/#cfg
   config: {
-    fontFamily: 'Hack',
+    fontFamily: 'Knack Nerd Font',
   },
 
   // See https://hyper.is/#extensions
   plugins: [
-    'hyper-solarized-light'
+    'hyper-solarized-dark'
   ],
 
 };

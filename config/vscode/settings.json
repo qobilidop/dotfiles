@@ -1,9 +1,8 @@
 // Place your settings in this file to overwrite default and user settings.
 {
-    "editor.fontFamily": "Hack, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontFamily": "Knack Nerd Font",
     "editor.rulers": [79],
     "editor.wordWrap": "on",
-    "workbench.colorTheme": "Solarized Light",
-    "workbench.panel.location": "bottom",
-    "editor.renderWhitespace": "none"
+    "workbench.colorTheme": "Solarized Dark",
+    "workbench.panel.location": "right"
 }

@@ -1,28 +1,30 @@
 # oh-my-zsh
 # https://github.com/robbyrussell/oh-my-zsh/blob/master/templates/zshrc.zsh-template
+
 export ZSH=$HOME/.local/opt/oh-my-zsh
-ZSH_THEME="powerlevel9k/powerlevel9k"
 plugins=(
   git
 )
-source $ZSH/oh-my-zsh.sh
 
-
-# powerlevel9k
+# powerlevel9k theme
 # https://github.com/bhilburn/powerlevel9k
+
+ZSH_THEME="powerlevel9k/powerlevel9k"
+POWERLEVEL9K_MODE=nerdfont-complete
+
 export DEFAULT_USER="$USER"
-POWERLEVEL9K_COLOR_SCHEME="light"
-POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
-POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status ssh anaconda)
-POWERLEVEL9K_ANACONDA_BACKGROUND="green"
+POWERLEVEL9K_ANACONDA_BACKGROUND=green
+
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+
+source $ZSH/oh-my-zsh.sh
 
 
 # local customization
 source ~/.rc
-
 
 # direnv
 # https://direnv.net/

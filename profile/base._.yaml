@@ -28,7 +28,7 @@
 # Git
 - link:
     ~/.gitconfig: config/gitconfig
-    ~/.gitconfig_local: config/gitconfig_local
+    ~/.gitconfig_personal: config/gitconfig_personal
 
 # SSH
 - link:

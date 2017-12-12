@@ -1,6 +1,6 @@
 [core]
 
-	excludesfile = ~/.gitignore_global
+    excludesfile = ~/.gitignore_global
 
 [user]
 
@@ -18,4 +18,4 @@
     #     order to allow any of the above configs to be overwritten
     #     by the local ones
 
-	path = ~/.gitconfig_local
+    path = ~/.gitconfig_personal
