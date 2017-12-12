@@ -1,3 +1,7 @@
+# SSH
+- link:
+    ~/.ssh/config: local/ssh/config_remote
+
 # System
 - link:
     ~/.gitignore/Linux.gitignore: extern/gitignore/Global/Linux.gitignore

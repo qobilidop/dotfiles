@@ -28,3 +28,4 @@
 # Git
 - link:
     ~/.gitconfig: config/gitconfig
+    ~/.gitconfig_local: config/gitconfig_local
