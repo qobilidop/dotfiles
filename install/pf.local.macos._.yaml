@@ -1,2 +1,0 @@
-- shell:
-  - brew bundle -v --file=install/Brewfile.macos

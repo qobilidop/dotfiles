@@ -1,0 +1,30 @@
+# Dotbot config
+- defaults:
+    link:
+      create: true
+      relink: true
+    shell:
+      stdout: true
+
+# General
+- link:
+    ~/.rc.d: config/rc.d
+    ~/.rc: config/rc
+- env:
+    PATH: "{HOME}/.local/bin:{PATH}"
+
+# Brew
+- shell:
+  - which brew || script/install-brew.sh
+  - brew tap homebrew/bundle 
+  - brew bundle -v --file=data/Brewfile
+
+# Conda
+- shell:
+  - which conda || script/install-conda.sh
+- link:
+    ~/.condarc: config/condarc
+
+# Git
+- link:
+    ~/.gitconfig: config/gitconfig

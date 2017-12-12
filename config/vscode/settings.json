@@ -4,5 +4,6 @@
     "editor.rulers": [79],
     "editor.wordWrap": "on",
     "workbench.colorTheme": "Solarized Light",
-    "workbench.panel.location": "right"
+    "workbench.panel.location": "bottom",
+    "editor.renderWhitespace": "none"
 }
