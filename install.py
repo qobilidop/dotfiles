@@ -9,8 +9,8 @@ from os import path
 from subprocess import call
 
 # Dotbot Configurations
-DOTBOT = 'install/dotbot/bin/dotbot'
-PLUGINS = ['-p', 'install/dotbot-env/env.py']
+DOTBOT = 'extern/dotbot/bin/dotbot'
+PLUGINS = ['-p', 'extern/dotbot-env/env.py']
 
 # Path Processing
 BASE_DIR = path.dirname(path.realpath(__file__))

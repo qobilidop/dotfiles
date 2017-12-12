@@ -8,9 +8,9 @@
 
 # System
 - link:
-    ~/.gitignore/macOS.gitignore: config/gitignore/Global/macOS.gitignore
+    ~/.gitignore/macOS.gitignore: extern/gitignore/Global/macOS.gitignore
 
 # Visual Studio Code
 - link:
-    ~/.gitignore/VisualStudioCode.gitignore: config/gitignore/Global/VisualStudioCode.gitignore
+    ~/.gitignore/VisualStudioCode.gitignore: extern/gitignore/Global/VisualStudioCode.gitignore
     ~/Library/Application Support/Code/User/settings.json: config/vscode/settings.json
