@@ -1,3 +1,7 @@
+Host *
+    AddKeysToAgent yes
+    IdentityFile ~/.ssh/id_rsa
+
 Host bridges
     HostName bridges.psc.edu
     User bdong

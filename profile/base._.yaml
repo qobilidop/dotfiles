@@ -29,3 +29,7 @@
 - link:
     ~/.gitconfig: config/gitconfig
     ~/.gitconfig_local: config/gitconfig_local
+
+# SSH
+- link:
+    ~/.ssh/config: config/ssh/config
