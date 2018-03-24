@@ -1,4 +1,15 @@
+if [ -f ~/.bashrc_before ]; then
+    source ~/.bashrc_before
+fi
+
+
 source ~/.rc
+
+
+if [ -f ~/.bashrc_after ]; then
+    source ~/.bashrc_after
+fi
+
 
 # direnv
 # https://direnv.net/
