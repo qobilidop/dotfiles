@@ -7,15 +7,20 @@
       stdout: true
 
 # General
+- clean: ['~']
 - link:
-    ~/.rc.d: config/rc.d
     ~/.rc: config/rc
-- env:
-    PATH: "{HOME}/.local/bin:{PATH}"
+- shell:
+  - git submodule update --init --recursive
 
 # Brew
 - shell:
   - which brew || script/install-brew.sh
+- env:
+    PATH: "/home/linuxbrew/.linuxbrew/bin:{PATH}"
+- env:
+    PATH: "{HOME}/.linuxbrew/bin:{PATH}"
+- shell:
   - brew bundle -v --file=config/brew/Brewfile
 
 # Conda
