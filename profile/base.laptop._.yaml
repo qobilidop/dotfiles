@@ -1,16 +1,27 @@
-# Brew (macOS specific)
+# Brew
 - shell:
   - brew bundle -v --file=config/brew/Brewfile.macos
-
-# Hyper
-- link:
-    ~/.hyper.js: config/hyper.js
 
 # OS
 - link:
     ~/.gitignore/macOS.gitignore: extern/gitignore/Global/macOS.gitignore
 
-# Visual Studio Code
+# Shell
+- shell:
+  - which zsh
+  - sudo chsh -s "$(which zsh)" "$USER"
+  - script/install-oh-my-zsh.sh
+  - script/install-powerlevel9k.sh
+- link:
+    ~/.zshrc: config/zshrc
+
+# Applications
+
+## Hyper
+- link:
+    ~/.hyper.js: config/hyper.js
+
+## Visual Studio Code
 - link:
     ~/.gitignore/VisualStudioCode.gitignore: extern/gitignore/Global/VisualStudioCode.gitignore
     ~/Library/Application Support/Code/User/settings.json: config/vscode/settings.json
