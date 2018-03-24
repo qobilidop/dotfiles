@@ -1,3 +1,10 @@
+brew "cloc"
+brew "node"
+brew "ssh-copy-id"
+brew "thefuck"
+brew "tldr"
+brew "zsh"
+
 tap "caskroom/cask"
 cask "1password"
 cask "docker"

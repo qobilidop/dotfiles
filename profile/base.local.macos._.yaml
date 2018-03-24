@@ -1,6 +1,6 @@
 # Brew (macOS specific)
 - shell:
-  - brew bundle -v --file=data/Brewfile.macos
+  - brew bundle -v --file=config/brew/Brewfile.macos
 
 # Hyper
 - link:

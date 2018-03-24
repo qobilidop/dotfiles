@@ -16,8 +16,7 @@
 # Brew
 - shell:
   - which brew || script/install-brew.sh
-  - brew tap homebrew/bundle 
-  - brew bundle -v --file=data/Brewfile
+  - brew bundle -v --file=config/brew/Brewfile
 
 # Conda
 - shell:
