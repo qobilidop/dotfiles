@@ -6,7 +6,7 @@
 - link:
     ~/.hyper.js: config/hyper.js
 
-# System
+# OS
 - link:
     ~/.gitignore/macOS.gitignore: extern/gitignore/Global/macOS.gitignore
 
