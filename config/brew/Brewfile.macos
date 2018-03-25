@@ -1,4 +1,6 @@
+tap "homebrew/core"
 brew "cloc"
+brew "direnv"
 brew "git"
 brew "node"
 brew "ssh-copy-id"

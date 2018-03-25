@@ -18,8 +18,6 @@
   - which brew || script/install-brew.sh
 - env:
     PATH: "{HOME}/.linuxbrew/bin:{PATH}"
-- shell:
-  - brew bundle -v --file=config/brew/Brewfile
 
 # Conda
 - shell:
