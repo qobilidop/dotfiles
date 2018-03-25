@@ -5,6 +5,9 @@ if [[ $(uname) == 'Darwin' ]]; then
     # https://brew.sh
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 else
-    # http://linuxbrew.sh
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+    # http://linuxbrew.sh/#alternative-installation
+    dir=~/.linuxbrew
+    if [ ! -d $dir ]; then
+        git clone https://github.com/Linuxbrew/brew.git $dir
+    fi
 fi
