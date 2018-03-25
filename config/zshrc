@@ -39,5 +39,5 @@ fi
 
 # direnv
 # https://direnv.net/
-# Should be at the end.
-eval "$(direnv hook zsh)"
+# Should be at the end of the rc file
+command -v direnv >/dev/null 2>&1 && eval "$(direnv hook zsh)"
