@@ -1,3 +1,2 @@
 tap "homebrew/core"
 brew "direnv"
-brew "git"

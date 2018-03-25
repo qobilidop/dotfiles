@@ -1,4 +1,5 @@
 brew "cloc"
+brew "git"
 brew "node"
 brew "ssh-copy-id"
 brew "thefuck"
