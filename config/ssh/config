@@ -2,6 +2,10 @@ Host *
     AddKeysToAgent yes
     IdentityFile ~/.ssh/id_rsa
 
+Host comet
+    HostName comet.sdsc.edu
+    User b2dong
+
 Host bridges
     HostName bridges.psc.edu
     User bdong
