@@ -30,6 +30,10 @@
     ~/.gitconfig: config/gitconfig
     ~/.gitconfig_personal: config/gitconfig_personal
 
+# Mercurial
+- link:
+    ~/.hgrc: config/hgrc
+
 # SSH
 - link:
     ~/.ssh/config: config/ssh/config
