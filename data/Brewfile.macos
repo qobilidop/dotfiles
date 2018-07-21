@@ -1,3 +1,5 @@
+# See https://github.com/Homebrew/homebrew-bundle#usage
+
 tap "homebrew/core"
 brew "cloc"
 brew "direnv"
@@ -26,6 +28,7 @@ tap "caskroom/fonts"
 cask "font-hack-nerd-font"
 
 brew "mas"
-mas "Magnet", id: 441258766
-mas "WeChat", id: 836500024
 mas "The Unarchiver", id: 425424353
+mas "Magnet", id: 441258766
+mas "Xcode", id: 497799835
+mas "WeChat", id: 836500024
