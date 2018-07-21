@@ -5,7 +5,7 @@ module.exports = {
 
   // See https://hyper.is/#cfg
   config: {
-    fontFamily: 'Knack Nerd Font',
+    fontFamily: 'Hack Nerd Font',
   },
 
   // See https://hyper.is/#extensions

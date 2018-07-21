@@ -1,6 +1,6 @@
 // Place your settings in this file to overwrite default and user settings.
 {
-    "editor.fontFamily": "Knack Nerd Font",
+    "editor.fontFamily": "Hack Nerd Font",
     "editor.rulers": [79],
     "editor.wordWrap": "on",
     "workbench.colorTheme": "Solarized Dark",
