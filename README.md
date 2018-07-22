@@ -5,7 +5,7 @@ My dotfiles bootstrapped by [Dotbot](https://github.com/anishathalye/dotbot)
 
 For the first time:
 ```bash
-git clone --recursive https://github.com/qobilidop/dotfiles.git ~/.dotfiles
+git clone --recurse-submodules https://github.com/qobilidop/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 ./install.py -p {profile}
 ```
