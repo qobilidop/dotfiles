@@ -4,3 +4,6 @@
 [submodule "gitignore"]
 	path = config/git/gitignore
 	url = https://github.com/github/gitignore
+[submodule "private"]
+	path = private
+	url = git@github.com:qobilidop/dotfiles-private.git
