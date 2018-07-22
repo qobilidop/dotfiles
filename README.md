@@ -3,16 +3,15 @@ My dotfiles bootstrapped by [Dotbot](https://github.com/anishathalye/dotbot)
 
 ## Usage
 
-On my laptop:
+For the first time:
 ```bash
 git clone --recursive https://github.com/qobilidop/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
-./install.py base.laptop
+./install.py -p {profile}
 ```
+where `{profile}` could be `hpc`, `macos` etc.
 
-On a remote server:
+Later on, simply use:
 ```bash
-git clone --recursive https://github.com/qobilidop/dotfiles.git ~/.dotfiles
-cd ~/.dotfiles
-./install.py base.server
+./install.py
 ```
