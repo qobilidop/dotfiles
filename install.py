@@ -24,54 +24,37 @@ def main():
     args = parser.parse_args()
 
     # Determine local profile
+    local_profile_record = path.join(BASE_DIR, 'profile.local')
     if args.profile is None:
-        local_profile_record = path.join(BASE_DIR, 'profile', 'local')
         with open(local_profile_record) as f:
             local_profile = f.read()
     else:
         local_profile = args.profile
-        local_profile_record = path.join(BASE_DIR, 'profile', 'local')
         with open(local_profile_record, 'w') as f:
             f.write(local_profile)
 
-    # Run dotbot
-    print('Install profile:', local_profile)
-    configs = collect(local_profile)
-    final_config = path.join(BASE_DIR, 'profile', 'final.yaml')
-    combine(configs, final_config)
-    install(final_config)
-
-
-def collect(profile):
-    """Collect all configuration files belong to a profile."""
+    # Assemble final config
+    print('Use profile:', local_profile)
+    profile_file = path.join(BASE_DIR, 'profile', local_profile)
     configs = []
-    while profile:
-        to_consider = path.join(BASE_DIR, 'profile', profile + '.yaml')
-        if path.exists(to_consider):
-            print('Add', path.basename(to_consider))
-            configs.insert(0, to_consider)
-        profile = profile[:profile.rfind('+')]
-    print('All configs collected')
-    return configs
-
-
-def combine(configs, final_config):
-    """Combine individual configuration files into a single final one."""
-    with open(final_config, 'w+') as fc:
+    with open(profile_file) as f:
+        for line in f:
+            config = line.strip()
+            if config and not config.startswith('#'):
+                print('Add config:', config)
+                configs.append(config)
+    final_config_file = path.join(BASE_DIR, 'config.yaml')
+    with open(final_config_file, 'w') as f_out:
         for config in configs:
-            with open(config, 'r') as c:
-                # Comment the origin of following configurations
-                fc.write('# ' + path.basename(config) + '\n')
-                # Copy the configurations
-                fc.writelines(c.readlines())
-                fc.write('\n')
-    print('Combine into', path.basename(final_config))
+            config_file = path.join(BASE_DIR, 'config', config, 'config.yaml')
+            with open(config_file) as f_in:
+                f_out.write('# ' + config + '\n')
+                f_out.writelines(f_in.readlines())
+                f_out.write('\n')
 
-
-def install(config):
-    """Use Dotbot to install according to configuration."""
+    # Install
     print('Install')
-    call([DOTBOT, '-d', BASE_DIR] + PLUGINS + ['-c', config])
+    call([DOTBOT, '-d', BASE_DIR] + PLUGINS + ['-c', final_config_file])
 
 
 if __name__ == '__main__':

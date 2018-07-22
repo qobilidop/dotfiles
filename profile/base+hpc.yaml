@@ -1,7 +1,0 @@
-# OS
-- link:
-    ~/.gitignore/Linux.gitignore: extern/gitignore/Global/Linux.gitignore
-
-# Shell
-- link:
-    ~/.bashrc: config/bashrc

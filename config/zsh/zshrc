@@ -1,8 +1,3 @@
-if [ -f ~/.zshrc_before ]; then
-    source ~/.zshrc_before
-fi
-
-
 # oh-my-zsh
 # https://github.com/robbyrussell/oh-my-zsh/blob/master/templates/zshrc.zsh-template
 
@@ -27,17 +22,9 @@ POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 
 source $ZSH/oh-my-zsh.sh
 
-
-# local customization
 source ~/.rc
-
-
-if [ -f ~/.zshrc_after ]; then
-    source ~/.zshrc_after
-fi
-
 
 # direnv
 # https://direnv.net/
 # Should be at the end of the rc file
-command -v direnv >/dev/null 2>&1 && eval "$(direnv hook zsh)"
+eval "$(direnv hook zsh)"

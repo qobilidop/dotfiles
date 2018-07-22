@@ -1,0 +1,15 @@
+base
+
+# System
+brew
+macos
+bash
+zsh
+ssh
+
+# Application
+conda
+git
+hyper
+mercurial
+vscode

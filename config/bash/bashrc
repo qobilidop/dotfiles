@@ -1,0 +1,6 @@
+source ~/.rc
+
+# direnv
+# https://direnv.net/
+# Should be at the end of the rc file
+eval "$(direnv hook bash)"

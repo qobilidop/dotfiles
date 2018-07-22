@@ -1,0 +1,3 @@
+- link:
+    ~/.gitconfig: config/git/gitconfig
+    ~/.rc.d/git: config/git/rc

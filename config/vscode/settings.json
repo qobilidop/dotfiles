@@ -1,7 +1,7 @@
 // Place your settings in this file to overwrite default and user settings.
 {
     "editor.fontFamily": "Hack Nerd Font",
-    "editor.rulers": [79],
+    "editor.rulers": [79, 80, 100, 120],
     "editor.wordWrap": "on",
     "workbench.colorTheme": "Solarized Dark",
     "workbench.panel.location": "right"
