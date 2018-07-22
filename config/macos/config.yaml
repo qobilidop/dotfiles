@@ -1,4 +1,4 @@
 - link:
-    ~/.gitignore.d/macOS.gitignore: extern/gitignore/Global/macOS.gitignore
+    ~/.gitignore.d/macOS.gitignore: config/git/gitignore/Global/macOS.gitignore
 - shell:
   - brew bundle -v --file=config/macos/Brewfile

@@ -1,2 +1,2 @@
 - link:
-    ~/.gitignore.d/Linux.gitignore: extern/gitignore/Global/Linux.gitignore
+    ~/.gitignore.d/Linux.gitignore: config/git/gitignore/Global/Linux.gitignore
