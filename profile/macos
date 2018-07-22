@@ -1,10 +1,13 @@
 base
 
 # System
+## Package
 brew
 macos
+## Shell
 bash
 zsh
+## Others
 ssh
 
 # Application

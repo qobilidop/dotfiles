@@ -1,7 +1,9 @@
 base
 
+# System
 linux
 
+# Application
 conda
 git
 mercurial
