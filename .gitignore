@@ -1,2 +1,2 @@
 # Ignore generated final configuration file
-final.*.yaml
+profile/final.yaml

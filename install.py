@@ -20,11 +20,24 @@ DOTBOT = path.join(BASE_DIR, DOTBOT)
 def main():
     """Main logic."""
     parser = ArgumentParser()
-    parser.add_argument('profile', type=str, default='base.local.macos')
+    parser.add_argument('--profile', '-p', type=str, default=None)
     args = parser.parse_args()
 
-    configs = collect(args.profile)
-    final_config = path.join(BASE_DIR, 'final.' + args.profile + '.yaml')
+    # Determine local profile
+    if args.profile is None:
+        local_profile_record = path.join(BASE_DIR, 'profile', 'local')
+        with open(local_profile_record) as f:
+            local_profile = f.read()
+    else:
+        local_profile = args.profile
+        local_profile_record = path.join(BASE_DIR, 'profile', 'local')
+        with open(local_profile_record, 'w') as f:
+            f.write(local_profile)
+
+    # Run dotbot
+    print('Install profile:', local_profile)
+    configs = collect(local_profile)
+    final_config = path.join(BASE_DIR, 'profile', 'final.yaml')
     combine(configs, final_config)
     install(final_config)
 
@@ -33,11 +46,11 @@ def collect(profile):
     """Collect all configuration files belong to a profile."""
     configs = []
     while profile:
-        to_consider = path.join(BASE_DIR, 'profile', profile + '._.yaml')
+        to_consider = path.join(BASE_DIR, 'profile', profile + '.yaml')
         if path.exists(to_consider):
             print('Add', path.basename(to_consider))
             configs.insert(0, to_consider)
-        profile = profile[:profile.rfind('.')]
+        profile = profile[:profile.rfind('+')]
     print('All configs collected')
     return configs
 

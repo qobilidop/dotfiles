@@ -28,7 +28,6 @@
 # Git
 - link:
     ~/.gitconfig: config/gitconfig
-    ~/.gitconfig_personal: config/gitconfig_personal
 
 # Mercurial
 - link:
