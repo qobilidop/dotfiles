@@ -1,5 +1,3 @@
-- shell:
-  - which conda || config/conda/install.sh
 - link:
     ~/.condarc: config/conda/condarc
     ~/.rc.d/conda: config/conda/rc

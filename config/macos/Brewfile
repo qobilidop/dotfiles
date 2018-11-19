@@ -13,6 +13,7 @@ brew "zsh"
 
 tap "caskroom/cask"
 cask "1password"
+cask "miniconda"
 cask "docker"
 cask "dropbox"
 cask "gitter"
