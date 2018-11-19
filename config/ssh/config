@@ -10,6 +10,10 @@ Host bridges
     HostName bridges.psc.edu
     User bdong
 
+Host bw
+    HostName bw.ncsa.illinois.edu
+    User dong4
+
 Host edison
     HostName edison.nersc.gov
     User bdong
