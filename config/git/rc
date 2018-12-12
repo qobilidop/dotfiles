@@ -1,3 +1,0 @@
-if [[ -d ~/.gitignore.d ]]; then
-    cat ~/.gitignore.d/* > ~/.gitignore
-fi

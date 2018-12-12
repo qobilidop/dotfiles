@@ -1,3 +1,0 @@
-# https://conda.io/docs/release-notes.html#recommended-change-to-enable-conda-in-your-shell
-. "$(brew --prefix)"/miniconda3/etc/profile.d/conda.sh
-conda activate base

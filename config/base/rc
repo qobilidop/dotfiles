@@ -1,6 +1,0 @@
-export EDITOR=emacs
-export PATH="~/.local/bin:$PATH"
-
-for rc in ~/.rc.d/*; do
-    source "$rc"
-done

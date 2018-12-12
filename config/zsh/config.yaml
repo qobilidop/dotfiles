@@ -1,8 +1,0 @@
-- shell:
-  - which zsh
-  - sudo chsh -s "$(which zsh)" "$USER"
-  - config/zsh/install-oh-my-zsh.sh
-  - config/zsh/install-powerlevel9k.sh
-- link:
-    ~/.zsh_profile: config/zsh/zshrc
-    ~/.zshrc: config/zsh/zshrc
