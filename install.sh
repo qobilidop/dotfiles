@@ -71,6 +71,7 @@ if [[ -d ~/.gitignore.d ]]; then
 fi
 
 # Deploy dotfiles to home directory
+deploy private home
 deploy home ~
 
 # Configure macOS
