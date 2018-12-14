@@ -3,8 +3,8 @@
 ## Usage
 
 Before installation:
-- Sign in App Store
-- Download id_rsa manually
+- Download `~/.ssh/id_rsa` manually for SSH access to GitHub
+- Sign in App Store for `mas`
 
 ```bash
 $ git clone --recurse-submodules git@github.com:qobilidop/dotfiles.git ~/dotfiles

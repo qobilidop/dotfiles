@@ -53,5 +53,6 @@ cask "gitter"
 cask "google-backup-and-sync"
 cask "google-chrome"
 cask "slack"
-mas "The Unarchiver", id: 425424353
+mas "Bear", id: 1091189122
 mas "Magnet", id: 441258766
+mas "The Unarchiver", id: 425424353
