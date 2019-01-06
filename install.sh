@@ -52,6 +52,10 @@ sudo -v
 brew bundle -v --file=Brewfile
 brew cleanup
 
+# Install Conda
+pyenv install miniconda-latest
+pyenv global miniconda-latest
+
 # Set Zsh as default shell
 ZSH="$(command -v zsh)"
 if [[ "$SHELL" != "$ZSH" ]]; then

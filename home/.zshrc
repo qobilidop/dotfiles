@@ -21,16 +21,13 @@ POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 # oh-my-zsh init
 source $ZSH/oh-my-zsh.sh
 
-# conda
-. "$(brew --prefix)"/miniconda3/etc/profile.d/conda.sh
-conda activate base
-
 # nvm
 export NVM_DIR="$HOME/.nvm"
 . "$(brew --prefix nvm)/nvm.sh"
 
 # pyenv
 eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 # direnv
 eval "$(direnv hook zsh)"

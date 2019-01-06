@@ -6,6 +6,7 @@ tap "caskroom/cask"
 tap "caskroom/fonts"
 
 # Core
+brew "zlib"
 brew "zsh"
 cask "font-hack-nerd-font"
 cask "hyper"
@@ -15,7 +16,6 @@ brew "git"
 brew "mercurial"
 cask "docker"
 cask "jetbrains-toolbox"
-cask "miniconda"
 cask "vagrant"
 cask "virtualbox"
 cask "visual-studio-code"
@@ -32,8 +32,8 @@ cask "java"
 brew "nvm"
 
 ## Python
-brew "pipenv"
 brew "pyenv"
+brew "pyenv-virtualenv"
 
 # Command line tools
 brew "cloc"
