@@ -53,8 +53,8 @@ brew bundle -v --file=Brewfile
 brew cleanup
 
 # Install Conda
-pyenv install miniconda-latest
-pyenv global miniconda-latest
+pyenv install miniconda3-latest
+pyenv global miniconda3-latest
 
 # Set Zsh as default shell
 ZSH="$(command -v zsh)"
