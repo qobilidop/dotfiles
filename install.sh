@@ -59,7 +59,7 @@ pyenv global miniconda3-latest
 # Set Zsh as default shell
 ZSH="$(command -v zsh)"
 if [[ "$SHELL" != "$ZSH" ]]; then
-    chsh -s "$ZSH" "$USER"
+    sudo chsh -s "$ZSH" "$USER"
 fi
 
 # Install Oh My Zsh and Powerlevel9k theme
