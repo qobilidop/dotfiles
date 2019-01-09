@@ -25,6 +25,9 @@ function deploy() {
     local DST_DIR="$2"
     shopt -s dotglob
     for SRC in "$SRC_DIR"/*; do
+        if [[ "$(basename "$SRC")" == ".gitignore" ]]; then
+            continue
+        fi
         DST="$DST_DIR/$(basename "$SRC")"
         if [[ -f "$SRC" || -L "$SRC" ]]; then
             rm -rf "$DST"
@@ -70,9 +73,7 @@ git_sync https://github.com/bhilburn/powerlevel9k.git "$OHMYZ/custom/themes/powe
 # Configure global gitignore
 GITIGNORE="$LOCAL/opt/gitignore"
 git_sync https://github.com/github/gitignore.git "$GITIGNORE"
-if [[ -d ~/.gitignore.d ]]; then
-    cat "$GITIGNORE"/Glocal/{macOS,VisualStudioCode}.gitignore > ~/.gitignore
-fi
+cat "$GITIGNORE"/Global/{macOS,VisualStudioCode}.gitignore > ~/.gitignore
 
 # Deploy dotfiles to home directory
 deploy private home
