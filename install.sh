@@ -25,9 +25,6 @@ function deploy() {
     local DST_DIR="$2"
     shopt -s dotglob
     for SRC in "$SRC_DIR"/*; do
-        if [[ "$(basename "$SRC")" == ".gitignore" ]]; then
-            continue
-        fi
         DST="$DST_DIR/$(basename "$SRC")"
         if [[ -f "$SRC" || -L "$SRC" ]]; then
             rm -rf "$DST"
