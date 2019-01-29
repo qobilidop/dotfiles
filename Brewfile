@@ -35,6 +35,9 @@ brew "nvm"
 brew "pyenv"
 brew "pyenv-virtualenv"
 
+## Ruby
+brew "rbenv"
+
 # Command line tools
 brew "cloc"
 brew "direnv"

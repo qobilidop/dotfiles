@@ -52,9 +52,15 @@ sudo -v
 brew bundle -v --file=Brewfile
 brew cleanup
 
-# Install Conda
+# Python
 pyenv install -s miniconda3-latest
 pyenv global miniconda3-latest
+
+# Ruby
+ruby_latest="$(rbenv install -l | grep -v - | tail -1 | tr -d '[:space:]')"
+rbenv install —s "$ruby_latest"
+rbenv rehash
+rbenv global "$ruby_latest"
 
 # Set Zsh as default shell
 ZSH="$(command -v zsh)"

@@ -29,5 +29,8 @@ export NVM_DIR="$HOME/.nvm"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
+# rbenv
+eval "$(rbenv init -)"
+
 # direnv
 eval "$(direnv hook zsh)"
