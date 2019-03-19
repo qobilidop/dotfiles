@@ -1,3 +1,1 @@
-/home/.ssh/config.d
-/home/.ssh/id_rsa*
-/home/local/bin/nersc-sshproxy.sh
+/home/.ssh/id_rsa

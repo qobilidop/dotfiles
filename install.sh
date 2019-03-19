@@ -2,6 +2,7 @@
 #
 # This script configures a macOS system to my liking from scratch
 #
+set -e
 
 LOCAL="$HOME/local"
 
@@ -52,13 +53,18 @@ sudo -v
 brew bundle -v --file=Brewfile
 brew cleanup
 
+# Get secret keys from 1Password
+eval "$(op signin qobilidop.1password.com qobilidop@gmail.com)"
+op get document id_rsa > home/.ssh/id_rsa
+chmod 600 home/.ssh/id_rsa
+
 # Python
 pyenv install -s miniconda3-latest
 pyenv global miniconda3-latest
 
 # Ruby
 ruby_latest="$(rbenv install -l | grep -v - | tail -1 | tr -d '[:space:]')"
-rbenv install —s "$ruby_latest"
+rbenv install -s "$ruby_latest"
 rbenv rehash
 rbenv global "$ruby_latest"
 
@@ -79,7 +85,6 @@ git_sync https://github.com/github/gitignore.git "$GITIGNORE"
 cat "$GITIGNORE"/Global/{macOS,VisualStudioCode}.gitignore > ~/.gitignore
 
 # Deploy dotfiles to home directory
-deploy private home
 deploy home ~
 
 # Configure macOS

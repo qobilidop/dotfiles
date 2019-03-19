@@ -47,6 +47,7 @@ brew "shellcheck"
 brew "ssh-copy-id"
 brew "thefuck"
 brew "tldr"
+cask "1password-cli"
 cask "basictex"
 
 # Desktop applications
