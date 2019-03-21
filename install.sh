@@ -58,10 +58,6 @@ eval "$(op signin qobilidop.1password.com qobilidop@gmail.com)"
 op get document id_rsa > home/.ssh/id_rsa
 chmod 600 home/.ssh/id_rsa
 
-# Python
-pyenv install -s miniconda3-latest
-pyenv global miniconda3-latest
-
 # Ruby
 ruby_latest="$(rbenv install -l | grep -v - | tail -1 | tr -d '[:space:]')"
 rbenv install -s "$ruby_latest"

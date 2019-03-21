@@ -32,8 +32,7 @@ cask "java"
 brew "nvm"
 
 ## Python
-brew "pyenv"
-brew "pyenv-virtualenv"
+cask "miniconda"
 
 ## Ruby
 brew "rbenv"

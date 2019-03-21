@@ -26,9 +26,10 @@ source $ZSH/oh-my-zsh.sh
 export NVM_DIR="$HOME/.nvm"
 . "$(brew --prefix nvm)/nvm.sh"
 
-# pyenv
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+# miniconda
+# https://docs.conda.io/projects/conda/en/latest/release-notes.html#id105
+. "$(brew --prefix)"/miniconda3/etc/profile.d/conda.sh
+conda activate base
 
 # rbenv
 eval "$(rbenv init -)"
