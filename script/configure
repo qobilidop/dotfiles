@@ -44,7 +44,7 @@ git_sync https://github.com/bhilburn/powerlevel9k.git "$OHMYZ/custom/themes/powe
 # Configure global gitignore
 GITIGNORE="$LOCAL/opt/gitignore"
 git_sync https://github.com/github/gitignore.git "$GITIGNORE"
-cat "$GITIGNORE"/Global/{macOS,VisualStudioCode}.gitignore > ~/.gitignore
+cat "$GITIGNORE"/Global/{macOS,VisualStudioCode}.gitignore > ~/.gitignore_global
 
 # Deploy dotfiles to home directory
 deploy home ~
