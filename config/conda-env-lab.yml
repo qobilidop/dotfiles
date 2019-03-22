@@ -1,0 +1,28 @@
+name: lab
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - astropy
+  - black
+  - bokeh
+  - cython
+  - dask
+  - ipyvolume
+  - jupyterlab
+  - networkx
+  - nodejs
+  - numba
+  - numpy
+  - matplotlib
+  - pandas
+  - papermill
+  - pylint
+  - pytest
+  - python
+  - scipy
+  - seaborn
+  - sphinx
+  - sympy
+  - unyt
+  - yt

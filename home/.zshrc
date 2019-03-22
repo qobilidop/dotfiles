@@ -1,4 +1,3 @@
-#!/usr/bin/env zsh
 export PATH="$HOME/local/bin:$PATH"
 
 # oh-my-zsh config
@@ -20,19 +19,12 @@ POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 
 # oh-my-zsh init
-source $ZSH/oh-my-zsh.sh
-
-# nvm
-export NVM_DIR="$HOME/.nvm"
-. "$(brew --prefix nvm)/nvm.sh"
+source "$ZSH"/oh-my-zsh.sh
 
 # miniconda
 # https://docs.conda.io/projects/conda/en/latest/release-notes.html#id105
 . "$(brew --prefix)"/miniconda3/etc/profile.d/conda.sh
 conda activate base
-
-# rbenv
-eval "$(rbenv init -)"
 
 # direnv
 eval "$(direnv hook zsh)"

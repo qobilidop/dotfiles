@@ -1,0 +1,5 @@
+tap "homebrew/core"
+brew "direnv"
+brew "git"
+brew "zlib"
+brew "zsh"

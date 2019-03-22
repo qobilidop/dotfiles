@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
-#
-# This script configures a macOS system to my liking from scratch
-#
 set -e
+cd "$(dirname "$0")"/..
 
 LOCAL="$HOME/local"
 
@@ -38,39 +36,7 @@ function deploy() {
     shopt -u dotglob
 }
 
-# Locate this directory
-cd "$(dirname "$0")"
-
-# Update repository
-git pull
-git submodule update --init --recursive
-
-# Install Homebrew
-command -v brew || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-# Install packages through Homebrew
-sudo -v
-brew bundle -v --file=Brewfile
-brew cleanup
-
-# Get secret keys from 1Password
-eval "$(op signin qobilidop.1password.com qobilidop@gmail.com)"
-op get document id_rsa > home/.ssh/id_rsa
-chmod 600 home/.ssh/id_rsa
-
-# Ruby
-ruby_latest="$(rbenv install -l | grep -v - | tail -1 | tr -d '[:space:]')"
-rbenv install -s "$ruby_latest"
-rbenv rehash
-rbenv global "$ruby_latest"
-
-# Set Zsh as default shell
-ZSH="$(command -v zsh)"
-if [[ "$SHELL" != "$ZSH" ]]; then
-    sudo chsh -s "$ZSH" "$USER"
-fi
-
-# Install Oh My Zsh and Powerlevel9k theme
+# Configure Oh My Zsh and Powerlevel9k theme
 OHMYZ="$LOCAL/opt/oh-my-zsh"
 git_sync https://github.com/robbyrussell/oh-my-zsh.git "$OHMYZ"
 git_sync https://github.com/bhilburn/powerlevel9k.git "$OHMYZ/custom/themes/powerlevel9k"

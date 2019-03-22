@@ -1,0 +1,22 @@
+tap "caskroom/cask"
+tap "caskroom/fonts"
+cask "1password"
+cask "1password-cli"
+cask "basictex"
+cask "docker"
+cask "dropbox"
+cask "font-hack-nerd-font"
+cask "gitter"
+cask "google-backup-and-sync"
+cask "google-chrome"
+cask "hyper"
+cask "java"
+cask "jetbrains-toolbox"
+cask "miniconda"
+cask "slack"
+cask "vagrant"
+cask "virtualbox"
+cask "visual-studio-code"
+mas "Bear", id: 1091189122
+mas "Magnet", id: 441258766
+mas "The Unarchiver", id: 425424353
