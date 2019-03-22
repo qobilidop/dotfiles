@@ -2,16 +2,11 @@
 set -e
 cd "$(dirname "$0")"/..
 
+echo
+echo "Setting up Homebrew"
+
 # Install Homebrew
 command -v brew || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-# Install packages
+# Install core packages
 brew bundle -v --file=config/Brewfile-core
-brew bundle -v --file=config/Brewfile-extended
-brew bundle -v --file=config/Brewfile-mac
-
-# Set Zsh as default shell
-ZSH="$(command -v zsh)"
-if [[ "$SHELL" != "$ZSH" ]]; then
-    sudo chsh -s "$ZSH" "$USER"
-fi

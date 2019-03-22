@@ -1,0 +1,19 @@
+#!/bin/bash
+set -e
+cd "$(dirname "$0")"/..
+
+echo
+echo "Setting up Visual Studio Code"
+
+# Install
+command -v code || brew cask install visual-studio-code
+
+# Install extensions
+EXTENSIONS="$(code --list-extensions)"
+grep -v '^ *#' < config/vscode-extensions | while IFS= read -r EXTENSION; do
+    if echo "$EXTENSIONS" | grep -q "$EXTENSION"; then
+        echo "Extension '$EXTENSION' is already installed."
+    else
+        code --install-extension "$EXTENSION"
+    fi
+done

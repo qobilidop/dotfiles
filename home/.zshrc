@@ -25,6 +25,3 @@ source "$ZSH"/oh-my-zsh.sh
 # https://docs.conda.io/projects/conda/en/latest/release-notes.html#id105
 . "$(brew --prefix)"/miniconda3/etc/profile.d/conda.sh
 conda activate base
-
-# direnv
-eval "$(direnv hook zsh)"

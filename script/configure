@@ -2,21 +2,7 @@
 set -e
 cd "$(dirname "$0")"/..
 
-LOCAL="$HOME/local"
-
-function git_sync() {
-    # Clone and update a git repository
-    local SRC="$1"
-    local DST="$2"
-    echo "Syncing $(basename "$DST")"
-    if [[ ! -d "$DST" ]]; then
-        mkdir -p "$(dirname "$DST")"
-        git clone "$SRC" "$DST"
-    else
-        cd "$DST" && git pull && cd - >/dev/null
-    fi
-}
-
+# Deploy dotfiles to home directory
 function deploy() {
     # Deploy a directory of dotfiles to another location
     local SRC_DIR="$1"
@@ -35,21 +21,9 @@ function deploy() {
     done
     shopt -u dotglob
 }
-
-# Configure Oh My Zsh and Powerlevel9k theme
-OHMYZ="$LOCAL/opt/oh-my-zsh"
-git_sync https://github.com/robbyrussell/oh-my-zsh.git "$OHMYZ"
-git_sync https://github.com/bhilburn/powerlevel9k.git "$OHMYZ/custom/themes/powerlevel9k"
-
-# Configure global gitignore
-GITIGNORE="$LOCAL/opt/gitignore"
-git_sync https://github.com/github/gitignore.git "$GITIGNORE"
-cat "$GITIGNORE"/Global/{macOS,VisualStudioCode}.gitignore > ~/.gitignore_global
-
-# Deploy dotfiles to home directory
 deploy home ~
 
-# Configure macOS
-# See https://github.com/mathiasbynens/dotfiles/blob/master/.macos
-defaults write com.apple.dock autohide -bool true
-defaults write com.apple.dock persistent-apps -array
+# Configure global gitignore
+GITIGNORE="$HOME/local/opt/gitignore"
+./script/git-sync https://github.com/github/gitignore.git "$GITIGNORE"
+cat "$GITIGNORE"/Global/{macOS,VisualStudioCode}.gitignore > ~/.gitignore_global

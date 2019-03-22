@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -e
+
+SRC="$1"
+DST="$2"
+if [[ ! -d "$DST" ]]; then
+    mkdir -p "$(dirname "$DST")"
+    git clone "$SRC" "$DST"
+else
+    cd "$DST" && git pull
+fi

@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -e
+cd "$(dirname "$0")"
+
+echo
+echo "Setting up macOS"
+
+# Configure macOS
+# https://github.com/mathiasbynens/dotfiles/blob/master/.macos
+defaults write com.apple.dock autohide -bool true
+defaults write com.apple.dock persistent-apps -array
+
+./setup-brew
+./setup-zsh
+./setup-vscode
