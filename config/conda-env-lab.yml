@@ -8,7 +8,9 @@ dependencies:
   - bokeh
   - cython
   - dask
+  - doit
   - ipyvolume
+  - jinja2
   - jupyterlab
   - networkx
   - nodejs
@@ -17,6 +19,7 @@ dependencies:
   - matplotlib
   - pandas
   - papermill
+  - pillow
   - pylint
   - pytest
   - python
@@ -26,3 +29,5 @@ dependencies:
   - sympy
   - unyt
   - yt
+  - pip:
+    - py-spy
