@@ -15,6 +15,7 @@ if [[ "$SHELL" != "$ZSH" ]]; then
 fi
 
 # Install Oh My Zsh and Powerlevel9k theme
-OHMYZ="$HOME/local/opt/oh-my-zsh"
+source "$HOME/.zshenv"
+OHMYZ="$LOCAL/opt/oh-my-zsh"
 ./git-sync https://github.com/robbyrussell/oh-my-zsh.git "$OHMYZ"
 ./git-sync https://github.com/bhilburn/powerlevel9k.git "$OHMYZ/custom/themes/powerlevel9k"

@@ -24,6 +24,7 @@ function deploy() {
 deploy home ~
 
 # Configure global gitignore
-GITIGNORE="$HOME/local/opt/gitignore"
+source "$HOME/.zshenv"
+GITIGNORE="$LOCAL/opt/gitignore"
 ./script/git-sync https://github.com/github/gitignore.git "$GITIGNORE"
 cat "$GITIGNORE"/Global/{macOS,VisualStudioCode}.gitignore > ~/.gitignore_global

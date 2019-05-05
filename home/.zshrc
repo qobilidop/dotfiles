@@ -1,8 +1,5 @@
-export PATH="$HOME/local/bin:$PATH"
-
 # oh-my-zsh config
 # https://github.com/robbyrussell/oh-my-zsh/blob/master/templates/zshrc.zsh-template
-export ZSH="$HOME/local/opt/oh-my-zsh"
 plugins=(
     git
 )

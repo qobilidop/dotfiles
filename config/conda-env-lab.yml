@@ -20,6 +20,7 @@ dependencies:
   - pandas
   - papermill
   - pillow
+  - pip
   - pylint
   - pytest
   - python
