@@ -1,7 +1,7 @@
 # https://git-scm.com/docs/git-config
 [core]
     editor = code --wait
-    excludesfile = ~/.gitignore_global
+    excludesfile = ~/.gitignore
 [user]
     email = qobilidop@gmail.com
     name = qobilidop

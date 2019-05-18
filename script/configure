@@ -22,9 +22,3 @@ function deploy() {
     shopt -u dotglob
 }
 deploy home ~
-
-# Configure global gitignore
-source "$HOME/.zshenv"
-GITIGNORE="$LOCAL/opt/gitignore"
-./script/git-sync https://github.com/github/gitignore.git "$GITIGNORE"
-cat "$GITIGNORE"/Global/{macOS,VisualStudioCode}.gitignore > ~/.gitignore_global
