@@ -2,11 +2,5 @@
 set -e
 cd "$(dirname "$0")"/..
 
-echo
-echo "Setting up Homebrew"
-
-# Install Homebrew
 command -v brew || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-# Install core packages
-brew bundle -v --file=config/Brewfile-core
+brew bundle -v --file=config/Brewfile

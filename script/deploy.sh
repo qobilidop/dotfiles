@@ -2,7 +2,7 @@
 set -e
 cd "$(dirname "$0")"/..
 
-# Deploy dotfiles to home directory
+# Symlink dotfiles to home directory
 function deploy() {
     # Deploy a directory of dotfiles to another location
     local SRC_DIR="$1"
@@ -22,3 +22,22 @@ function deploy() {
     shopt -u dotglob
 }
 deploy home ~
+
+# Sync opt git repos
+while read -r LINE; do
+    read -ra WORDS <<< "$LINE"
+    DIR="$HOME/.local/opt/${WORDS[0]}"
+    REPO="${WORDS[1]}"
+    echo "Checking $DIR ..."
+    if [[ ! -d "$DIR" ]]; then
+        # clone if not existing
+        mkdir -p "$(dirname "$DIR")"
+        git clone "$REPO" "$DIR"
+    else
+        # pull otherwise
+        (
+            cd "$DIR"
+            git pull
+        )
+    fi
+done < config/opt-git-repos

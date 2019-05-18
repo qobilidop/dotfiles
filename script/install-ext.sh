@@ -1,14 +1,14 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -e
 cd "$(dirname "$0")"/..
 
-echo
-echo "Setting up Visual Studio Code"
+# Install ext packages
+brew bundle -v --file=config/Brewfile-ext
 
-# Install
-command -v code || brew cask install visual-studio-code
+# Install conda env lab
+conda env update -f config/conda-env-lab.yml
 
-# Install extensions
+# Install vscode extensions
 EXTENSIONS="$(code --list-extensions)"
 grep -v '^ *#' < config/vscode-extensions | while IFS= read -r EXTENSION; do
     if echo "$EXTENSIONS" | grep -q "$EXTENSION"; then

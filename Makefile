@@ -1,23 +1,14 @@
-.PHONY: help
-help:
-	cat Makefile
-
-.PHONY: init
-init:
-	./script/configure
-	./script/setup-macos
-	./script/setup-crypto-key
-	@echo
-	conda env create -f config/conda-env-lab.yml
+.PHONY: deploy
+deploy:
+	git pull
+	./script/deploy.sh
+	./script/install.sh
+	./script/configure.sh
 
 .PHONY: ext
 ext:
-	brew bundle -v --file=config/Brewfile-ext
+	./script/install-ext.sh
 
-.PHONY: up
-up:
-	git pull
-	./script/configure
-	./script/setup-macos
-	@echo
-	conda env update -f config/conda-env-lab.yml
+.PHONY: plus
+plus:
+	brew bundle -v --file=config/Brewfile-plus

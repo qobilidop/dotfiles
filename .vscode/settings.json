@@ -1,5 +1,0 @@
-{
-    "shellcheck.ignorePatterns": {
-        "**/.zsh*": true
-    }
-}

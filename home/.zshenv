@@ -1,8 +1,9 @@
 # global
+export EDITOR="code"
 export LOCAL="$HOME/.local"
 
 # application
-export CONDA_PREFIX="$(brew --prefix)/miniconda3"
+export SPACK_ROOT="$LOCAL/opt/spack"
 export ZSH="$LOCAL/opt/oh-my-zsh"
 
 # system
