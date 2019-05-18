@@ -18,7 +18,7 @@ POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 # oh-my-zsh init
 source "$ZSH"/oh-my-zsh.sh
 
-# miniconda
-# https://docs.conda.io/projects/conda/en/latest/release-notes.html#id105
-. "$(brew --prefix)"/miniconda3/etc/profile.d/conda.sh
-conda activate base
+# conda init
+# https://docs.conda.io/projects/conda/en/latest/release-notes.html#recommended-change-to-enable-conda-in-your-shell
+. "$CONDA_PREFIX"/etc/profile.d/conda.sh
+conda activate lab
