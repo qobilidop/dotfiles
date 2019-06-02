@@ -1,14 +1,17 @@
 name: lab
 channels:
   - conda-forge
+  - pyviz
   - defaults
 dependencies:
   - astropy
   - black
   - bokeh
   - cython
+  - datashader
   - dask
   - doit
+  - holoviews
   - ipyvolume
   - jinja2
   - jupyterlab
@@ -24,11 +27,14 @@ dependencies:
   - pylint
   - pytest
   - python
+  - pyviz
+  - scikit-learn
   - scipy
   - seaborn
   - sphinx
   - sympy
   - unyt
+  - vaex
   - yt
   - pip:
     - py-spy
