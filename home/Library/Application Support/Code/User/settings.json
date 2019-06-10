@@ -1,6 +1,6 @@
 // Place your settings in this file to overwrite default and user settings.
 {
-    "editor.fontFamily": "Hack Nerd Font",
+    "editor.fontFamily": "Fira Code",
     "editor.renderWhitespace": "all",
     "editor.wordWrap": "on",
     "workbench.colorTheme": "Solarized Dark",
