@@ -14,3 +14,8 @@ conda activate lab
 # spack init
 # https://spack.readthedocs.io/en/latest/getting_started.html#add-spack-to-the-shell
 . "$SPACK_ROOT"/share/spack/setup-env.sh
+
+# nvm
+# https://github.com/nvm-sh/nvm#git-install
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
