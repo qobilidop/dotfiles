@@ -1,2 +1,5 @@
 [ui]
 username = Bili Dong <qobilidop@gmail.com>
+
+[extensions]
+hggit = ~/.local/opt/hg-git/hggit
