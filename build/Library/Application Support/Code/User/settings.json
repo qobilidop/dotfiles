@@ -1,0 +1,36 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+    "editor.fontFamily": "Fira Code",
+    "editor.renderWhitespace": "all",
+    "editor.wordWrap": "on",
+    "workbench.colorTheme": "Solarized Dark",
+    "workbench.panel.defaultLocation": "right",
+    // Language specific settings
+    "[css]": {
+        "editor.tabSize": 2,
+    },
+    "[html]": {
+        "editor.tabSize": 2,
+    },
+    "[java]": {
+        "editor.rulers": [100],
+        "editor.tabSize": 2,
+    },
+    "[javascript]": {
+        "editor.rulers": [80],
+        "editor.tabSize": 2,
+    },
+    "[json]": {
+        "editor.tabSize": 2,
+    },
+    "[python]": {
+        "editor.rulers": [80],
+        "editor.tabSize": 4,
+    },
+    "[typescript]": {
+        "editor.rulers": [80],
+        "editor.tabSize": 2,
+    },
+    "python.linting.pylintUseMinimalCheckers": false,
+    "window.zoomLevel": 0,
+}
