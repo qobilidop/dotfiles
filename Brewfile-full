@@ -1,6 +1,5 @@
 tap "homebrew/core"
 tap "caskroom/cask"
 brew "ffmpeg"
-brew "gcc"
 brew "pandoc"
 cask "mactex"

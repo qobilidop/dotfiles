@@ -1,7 +1,0 @@
-channels:
-  - conda-canary
-  - conda-forge
-  - defaults
-
-pinned_packages:
-  - conda-canary::conda

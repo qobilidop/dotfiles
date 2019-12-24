@@ -1,4 +1,0 @@
-tap "homebrew/core"
-brew "git"
-brew "zsh"
-cask "1password-cli"
