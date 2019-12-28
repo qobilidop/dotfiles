@@ -1,5 +1,6 @@
 tap "homebrew/core"
-tap "caskroom/cask"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
 brew "cloc"
 brew "shellcheck"
 brew "ssh-copy-id"
@@ -15,7 +16,7 @@ cask "google-backup-and-sync"
 cask "google-chrome"
 cask "slack"
 cask "vagrant"
-cask "virtualbox"
 mas "Bear", id: 1091189122
 mas "Magnet", id: 441258766
 mas "The Unarchiver", id: 425424353
+mas "WeChat", id: 836500024

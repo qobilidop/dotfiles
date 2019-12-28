@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-if [[ -f ~/.ssh/id_rsa ]]; do
+if [[ -f ~/.ssh/id_rsa ]]; then
     cp ~/Documents/crypto.zip ~/.ssh
     (
         cd ~/.ssh
         unzip crypto.zip
     )
     rm ~/.ssh/crypto.zip
-done
+fi
