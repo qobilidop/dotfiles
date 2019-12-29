@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-brew install go
+command -v go || brew install go
