@@ -17,4 +17,5 @@ $ make install-full  # optional
 - [MikeMcQuaid/dotfiles](https://github.com/MikeMcQuaid/dotfiles)
 - [anishathalye/dotfiles](https://github.com/anishathalye/dotfiles)
 - [donnemartin/dev-setup](https://github.com/donnemartin/dev-setup)
+- [mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles)
 - [sb2nov/mac-setup](https://github.com/sb2nov/mac-setup)
