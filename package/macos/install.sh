@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+xcode-select --install
+
 # Set macOS defaults
 # https://github.com/mathiasbynens/dotfiles/blob/master/.macos
 

@@ -8,6 +8,7 @@ help:
 .PHONY: init
 init:
 	command -v brew || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	command -v mas || brew install mas
 	command -v stow || brew install stow
 
 .PHONY: deploy-test
