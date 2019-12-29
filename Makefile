@@ -2,18 +2,19 @@
 help:
 	cat Makefile
 
-.PHONY: build
-build:
-	./script/build.sh config build
+.PHONY: init
+init:
+	command -v brew || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	command -v stow || brew install stow
 
 .PHONY: deploy-test
 deploy-test:
 	mkdir -p test-home-dir
-	./script/deploy.sh build test-home-dir
+	cd package && stow --ignore=stowignore.* -t ../test-home-dir *
 
 .PHONY: deploy
 deploy:
-	./script/deploy.sh build ~
+	cd package && stow --ignore=stowignore.* -t ~ *
 
 .PHONY: install
 install:
@@ -30,4 +31,4 @@ chmod:
 
 .PHONY: clean
 clean:
-	rm -rf build
+	rm -rf test-home-dir
