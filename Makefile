@@ -28,10 +28,6 @@ install:
 install-full:
 	brew bundle -v --file=data/Brewfile-full
 
-.PHONY: chmod
-chmod:
-	chmod +x script/*.sh package/*/install.sh
-
 .PHONY: clean
 clean:
 	rm -rf $(TEST_DIR)
