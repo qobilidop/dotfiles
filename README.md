@@ -5,7 +5,7 @@ This my personal software development environment on macOS.
 ## Usage
 
 ```console
-$ make build
+$ make init
 $ make deploy-test  # optional
 $ make deploy
 $ make install
