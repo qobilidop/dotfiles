@@ -1,2 +1,2 @@
-test-home-dir/
-*.lock.json
+home-preview/
+Brewfile.lock.json
